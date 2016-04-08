@@ -9,11 +9,9 @@ categories: post
 
 ### There are two types of people
 
-$$>99$$% of people hear *friendship bread* and think "Oh, that sounds weird." The remaining $$<1$$% have lived in central Pennsylvania for part of their life and think "Oh my god yes where is it give it here."
+$$>99$$% of people hear *friendship bread* and think "Oh, that sounds weird." The remaining $$<1$$% have lived in central Pennsylvania for part of their life and think "Oh my god yes where is it give it here." Friendship bread is an absolutely delicious cinnamon and sugar bread. It's sweet and moist like banana bread, with  the same cake-like consistency.
 
-Friendship bread is an absolutely delicious cinnamon and sugar bread. It's sweet and moist like banana bread, with  the same cake-like consistency.
-
-Why the name? It's a [sourdough bread](http://www222.pair.com/sjohn/blueroom/sour.htm). This means the bread begins from a "starter", which is a combination of water, yeast, sugar, and sometimes milk. In the starter, the yeast grows, so you never have to add more. Instead you just keep feeding it by adding more sugar.
+Why the name? It's a [sourdough bread](http://www222.pair.com/sjohn/blueroom/sour.htm). This means the bread begins from a "starter", which is a combination of water, yeast, sugar, and sometimes milk. In the starter, the yeast grows, so you never have to add more. Instead you just keep feeding it by adding more ingredients. Also, you normally give away some of the starter to your *friends* after you've finished it. Hence friendship.
 
 
 &nbsp;
@@ -147,6 +145,6 @@ Use nonmetal containers, bowls, and mixing utensils that could come into contact
 
 If you've got lumpy starter at the beginning, the lumps will go away as the starter grows. I recommend you sift the flour and sugar as you continue the starter. If your ending starter still is lumpy, pour it into a large container, or break it up into small batches, so you can break up the clumps with a plastic spatula. Be careful not to overmix your starter when doing this.
 
-To eat like a true central PA'ian. Serve with two healthy slabs of butter on top and maybe some more cinnamon sugar. Delicious fresh out of the oven, but I actually prefer it a day or 2 old. The top crust gets deliciously soft and the whole bread is soft and moist.
+To eat like a true central PA'ian. Serve with two healthy slabs of butter on top and maybe some more cinnamon sugar. Delicious fresh out of the oven, but I actually prefer it a day or 2 old. The top crust gets deliciously soft and the flavors in the bread just get to know each other a bit better.
 
 ![butter](\assets\butter.jpg)
