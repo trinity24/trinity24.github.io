@@ -64,3 +64,5 @@ Press into prepared pan. Bake for 15 minutes. (Baking these bars makes sure the 
 Store in an air tight container for up to 5 days or so. Storing them in the fridge helps them keep their shape. They'll keep in the freezer for up to a few weeks.
 
 You could add about twice the amount of oats to make these more like granola bars. Enjoy!
+
+![pile bars](\assets\pile2 copy.jpg)

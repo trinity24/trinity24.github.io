@@ -8,7 +8,7 @@ permalink: /about/
 
 This site is managed by me (Sami Davies)! I'm currently a first year PhD student in the [Department of Mathematics, Statistics, and Computer Science](http://www.math.uic.edu/) at the University of Illinois at Chicago. After completing this year at UIC, I'll be relocating to the University of Washington to continue working towards my PhD. I graduated from Carnegie Mellon with a BS in Mathematical Sciences in May 2015. The goal of this blog is to
 
-* Introduce areas in my field of study, which particular pique my interest.
+* Introduce areas in my field of study, which particularly pique my interest.
 * Improve my ability to answer "So you're a math PhD student... what do you do?"
 * Selfishly relieve my own stress when I have my weekly quarter life crisis about "Wow I just spent 14 hours thinking about triangles. Why am I doing this with my life."
 
