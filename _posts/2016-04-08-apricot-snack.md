@@ -65,4 +65,4 @@ Store in an air tight container for up to 5 days or so. Storing them in the frid
 
 You could add about twice the amount of oats to make these more like granola bars. Enjoy!
 
-![pile bars](\assets\pile2.jpg)
+![pile bars](\assets\pile2.JPG)
