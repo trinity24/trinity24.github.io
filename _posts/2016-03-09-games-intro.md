@@ -35,9 +35,9 @@ Consider the following game between two players. There is a set of $$n$$ hershey
 
 - 2: The *previous* player takes the last kiss after the next player leaves exactly 1 kiss.
 
-- 5: After a move on 5 kisses, there are 1, 2 or 4 kisses left. The *next* player can take 3 kisses, so they because the previous player on a game with 2 kisses.
+- 5: After a move on 5 kisses, there are 1, 2 or 4 kisses left. The *next* player can take 3 kisses, so they become the previous player on a game with 2 kisses.
 
-- 6: After a move on 6 kisses, there are 2, 3 or 5 kisses left. The *next* player can take 4 kisses, so they because the previous player on a game with 2 kisses.
+- 6: After a move on 6 kisses, there are 2, 3 or 5 kisses left. The *next* player can take 4 kisses, so they become the previous player on a game with 2 kisses.
 
 - 7: After a move on 7 kisses, there are 3, 4, or 5 kisses left. On all the these positions the next player to move wins, so here the *previous* player to move wins.
 
