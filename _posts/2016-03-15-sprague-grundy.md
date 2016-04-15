@@ -1,19 +1,24 @@
 ---
 layout: post
-title:  The Sprague-Grundy Theorem
+title:  The Sprague-Grundy Theorem (2)
 date:   2016-03-09
 categories: post
 ---
 
 ### Before you start
 
-<img src="/assets/nim-small.png" alt="nim" style="float: left;margin: 10px;">
+<img src="/assets/nim.png" alt="nim" style="float: left;margin: 10px;">
 
 
 If you forget how to play the game [nim](https://en.wikipedia.org/wiki/Nim), or forget what its winning strategy is, check out my post [Nim - A surprisingly important game]({% post_url 2016-03-09-games-intro %}). In that same post, there's also a bunch of definitions that will help refresh your memory on some properties of combinatorial games, if you need it.
 
 
 Are you cool with how nim works and remember what combinatorial games are? Good.
+
+&nbsp;
+
+&nbsp;
+
 
 ### Background
 

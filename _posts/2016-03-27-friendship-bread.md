@@ -5,7 +5,7 @@ date:   2016-03-27
 categories: post
 ---
 
-<img src="/assets/bigbread.jpg" alt="bread" style="float: left; margin: 20px">
+![main picture](\assets\sidebread.jpg)
 
 ### There are two types of people
 
@@ -13,12 +13,10 @@ $$>99$$% of people hear *friendship bread* and think "Oh, that sounds weird." Th
 
 Why the name? It's a [sourdough bread](http://www222.pair.com/sjohn/blueroom/sour.htm). This means the bread begins from a "starter", which is a combination of water, yeast, sugar, and sometimes milk. In the starter, the yeast grows, so you never have to add more. Instead you just keep feeding it by adding more ingredients. Also, you normally give away some of the starter to your *friends* after you've finished it. Hence friendship.
 
-
-&nbsp;
-
 Friendship bread is more properly called Amish friendship bread. The Amish are supposedly the only people who know the real recipe for the starter. I grew up eating friendship bread made from starter one of my mom's Amish acquaintance had given her. However... the friendship bread starter recipe on allrecipes.com produces bread that tastes exactly the same. So, I'm pretty sure the starter recipe isn't actually a secret.
 
-![main picture](\assets\sidebread.jpg)
+![first picture](\assets\bigbread.jpg)
+
 
 ### Starter recipe
 

@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  Nim- A Surprisingly Important Game
+title:  Nim- A Surprisingly Important Game (2)
 date:   2016-03-09
 categories: post
 ---
-
-
 
 ### Combinatorial games
 
@@ -17,7 +15,7 @@ You can probably think of tons of classic combinatorial games that you played si
 
 ![sad](\assets\sad-kid.png)
 
-### Nim *
+### Nim
 
 In the game [**nim**](https://en.wikipedia.org/wiki/Nim), two players alternate taking items from different piles. There can be any (finite) number of piles, and the piles can have any (finite) number of items in them. At each turn, a player must remove at least one item, and all items removed must come from the same pile. The goal of nim is to be the last player to take an object (in other words, your opponent is unable to make a move because all piles are empty).
 
@@ -61,7 +59,7 @@ This example demonstrates how to characterize N-positions and P-positions in a g
 
 
 
-#### Back to nim *
+#### Back to nim
 
 So how do you win nim? If you don't already know how this winning strategy goes, [try a few rounds here](https://www.archimedes-lab.org/game_nim/play_nim_game.html), and see if you can figure it out.
 
@@ -69,7 +67,7 @@ So how do you win nim? If you don't already know how this winning strategy goes,
 
 First, let's define **nim-sum**, but [turn to your old friend](https://en.wikipedia.org/wiki/Exclusive_or) if you forget, or never knew, what the *xor* operation is. When $$n$$ numbers, $$x_1,\cdots, x_n$$, are written in their binary representation, the nim-sum of them is just $$ x_1 \oplus x_2 \oplus \cdots \oplus x_n$$.
 
-### Bouton's theorem *
+### Bouton's theorem
 
 Whether the first player to move has the winning strategy depends exactly on the size of the piles. The following theorem was due to [Charles Bouton](https://en.wikipedia.org/wiki/Charles_L._Bouton).
 
@@ -122,7 +120,7 @@ So if the nim-sum in not 0, there is some move that can be made so that after th
 
 Combining Lemmas 2 and 3, we conclude that when the nim-sum of a stage of the game is 0, the next move will always make it nonzero, and when the nim-sum of a stage of the game is nonzero, there exists some move to make to nim-sum 0.
 
-### To be continued *
+### To be continued
 
 
 What does this mean? If the nim-sum is nonzero at the start of a game, player 1 can move to make it zero. No matter what player 2 does, player 1 is always able to make the nim-sum 0 again on their turn. Player 1 will always be able to make the last move as long as in each turn, they remove items from a pile to make the nim-sum 0. The number of items in play is strictly decreasing. So eventually, the move from player 1 to make the nim-sum 0, is the move which makes all the piles empty.

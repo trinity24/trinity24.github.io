@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  A brief history of common games
+title:  A Brief History of Common Games (1)
 date:   2016-03-09
 categories: post
 ---
 
 
 ### Major disclaimer
-This is a post about some of the **history** behind the solvability of a few common games.
+This is a post about some of the history behind the solvability of a few common games.
 
 ![major_buzzkill](/assets/major_buzzkill.gif)
 
@@ -19,11 +19,11 @@ It should be very understandable for people without a math background, as there 
 
 Games are the perfect mix of *chaos* and *strategy*: games are dynamic, since players' decisions affect them, but there often exists an optimal way to play. So, let's study a few simple games most people have played and examine:
 
--- why we can solve some games but not others
+* why we can solve some games but not others
 
--- how we solve these games
+* how we solve these games
 
--- some different processes which were developed along the way
+* some different processes which were developed along the way
 
 I'll focus on tic-tac-toe and set take-away, but also briefly discuss Connect 4, checkers, and chess.
 

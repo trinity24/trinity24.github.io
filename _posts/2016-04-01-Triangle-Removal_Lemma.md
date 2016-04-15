@@ -1,86 +1,130 @@
 ---
 layout: post
-title:  Triangle Removal Lemma
+title:  Triangle Removal Lemma (3)
 date:   2016-04-01
 categories: post
 ---
 
 ### Why do people care about triangles
 
-Suffice it to say for now that people care about things being triangle free. Some applications include:
+Whether or not a graph contains any triangles (3 vertices which are all adjacent to each other) is relevant for many questions in mathematics. Below, some interesting ones are briefly explained in order to motivate why people care about triangles.
 
--- Roth's lemma
+![triangleline](\assets\triangle_line.png)
 
--- Point line incidence in paper
 
---
+#### Intersection graphs
 
-The triangle removal lemma shows that in any graph with some triangles in it (but not too many), we can remove not too many edges to make the graph triangle free. Thus for the reasons listed above, and many many more, the Triangle Removal Lemma is a very useful tool in many areas of combinatorics.
+The intersection graph of a family of lines $$\mathcal{L}$$ is the graph on the vertex set $$\mathcal{L}$$, where an edge exists between $$l_1,l_2 \in \mathcal{L}$$ if and only if $$l_1$$ and $$l_2$$ intersect. A famous question posed by Erdös in the 1970s is whether the chromatic number of intersections graphs of line segments is bounded by a function of their clique number (the maximum size of a clique in the graph). The answer: "no" was recently published in [this paper](http://arxiv.org/pdf/1209.1595.pdf).
 
-The triangle removal lemma was due to Szemeredi in kjerlkerw. He sklkfjhjfd.
+The authors prove that for every positive integer $$k$$, there exists an arrangement of a finite number of line segments so that the intersection graph of the line segments is triangle-free and has chromatic number greater than $$k$$. Think about how you would construct a graph with large chromatic number. Intuitively, you might think you have to have 2 intersecting lines, which are both different colors in a proper coloring, and then another line intersecting both of those. But this is exactly a triangle! Thus the construction of this arrangement is by no means obvious and is of interest to those who study combinatorial geometry.
+
+Also in the realm of incidence geometry, the triangle removal lemma is explicitly used in [this 2008  paper by Solymosi](http://arxiv.org/pdf/math/0504009v1.pdf). The author proves that when an arrangement of points and lines defines a lot of incidences (at least $$cn^{4/3}$$ as given by the Szemerédi-Trotter theorem), then there exists $$k$$ points, which are not collinear or concurrent, so that any pair of them is incident to a line.
+
+#### Networks: phase transitions and independence number
+
+In a network, the existence of triangles may be undesirable depending on the network's purpose. For example, a random graph on $$n$$ vertices without any cliques is exactly a triangle-free graph. It's easy to prove using the second moment method that with high probability an [Erdö-Rényi](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) random graph on $$n$$ vertices is triangle-free for $$p = o(1/n)$$, where $$p$$ is the probability of an edge between any 2 vertices.
+
+Furthermore, Ajtai, Komlós, and Szemerédi showed that when a graph $$G$$ on $$n$$ vertices is triangle-free with maximum degree at most $$d \geq 1$$, it has a large independence number $$\alpha(G) >\frac{n \cdot \log d}{8d}$$. Thus knowing whether the underlying graph of a network is triangle-free provides confirmation of the existence of a large independent set in the network.
+
+
+#### Arithmetic progressions
+
+This last result is actually a consequence of the theorem proven in this post: the triangle removal lemma. Roth's lemma states that for $$A \subset \mathbb{N}$$ which has [positive upper density](https://en.wikipedia.org/wiki/Natural_density#Upper_and_lower_asymptotic_density), $$A$$ contains an arithmetic progression of length 3. For reasons beyond my knowledge base, as my knowledge base of number theory is $$\epsilon$$, arithmetic progressions with common differences of 3 or 4 are very important in number theory.
+
+![triangleline](\assets\triangle_line.png)
+
+The triangle removal lemma shows that if a lot of edges must be removed to make a graph triangle-free, then there must have been a lot of triangles in the graph to begin with. Groundbreaking, right?
+
+**The Triangle Removal Lemma** For every $$\epsilon>0$$ there exists $$\delta>0$$ such that for any graph $$G$$ on $$n$$ vertices where at least $$\epsilon n^2$$ edges must be removed in order to make it triangle-free, $$G$$ contains at least $$\delta n^3$$ triangles.
+
+Thus for the reasons listed above, and many many more, the triangle removal lemma is a very useful tool. Its proof is due to Rusza and Szemerédi.
 
 ### Background and definitions
 
-If you're very familiar with the Szemerdi's regularity lemma, which I will undoubtedly write a post on in the future, you can probably skip this section.
+If you're familiar with [Szemerédi's regularity lemma](https://en.wikipedia.org/wiki/Szemer%C3%A9di_regularity_lemma), you can probably skip this section. From now on I'll use standard graph theory notation, but will introduce all non-basic definitions. Assume $$G=(V,E)$$ is a graph with vertex set $$V$$ and edge set $$E$$.
 
-From now on I'll standard graph theoretic notation, but will introduce all non-basic definitions. Assume $$G$$ is a graph, with vertex set $$V$$ and edge set $$E$$.
-
-The triangle removal lemma and regularity lemma both rely on the fact that most graphs "look random".
+The triangle removal lemma and regularity lemma both rely on the fact that "most graphs look random".
 
 First, let $$A,B \subset V$$ where $$A$$ and $$B$$ are disjoint. The **density** of the pair $$(A,B)$$ is defined as
 
- $$d(A,B)=\frac{|E(A,B)|}{|A||B|}$$
+ $$d(A,B)=\frac{|E(A,B)|}{|A||B|}.$$
 
- Think of density as a measurement in $$[0,1]$$ for how many edges are going between two disjoint sets of vertices. All disjoint pairs of vertices in a complete graph have density 1, and most of the pairs of vertices in a sparse graph will have density close to 0.
+ Think of density as a measurement in $$[0,1]$$, where it represents the fraction of total possible edges between two disjoint sets, which are edges in the graph. To illustrate this, note that all disjoint pairs of vertices in a complete graph have density 1, and most of the pairs of vertices in a sparse graph will have density close to 0.
 
-Furthermore, $$(A,B)$$ is said to be **$$\epsilon$$-pseudo-random** if for all pairs $$(A',B')$$, where $$A' \subset A$$ and $$B'\subset B$$, $$|d(A,B)-d(A',B')| \leq \epsilon$$. Basically, the edge density in a pair of subsets is pretty much uniform between the pair. The figure below illustrates a graph that obviously satisfies this definition for pseudo-random, $$K_{4,4}$$, and a graph that is definitely not pseudo-random.
-The subset pair which is $$\epsilon$$-pseduo-random doesn't have an area where most of its edges lie.
+Furthermore, $$(A,B)$$ is said to be **$$\epsilon$$-pseudo-random** if for all pairs $$(A',B')$$, where $$A' \subset A$$ and $$B'\subset B$$, $$|d(A,B)-d(A',B')| \leq \epsilon$$. Basically, the edge density in a pair of subsets is pretty much uniform across the pair. The figure below illustrates a graph that obviously satisfies this definition for pseudo-random, $$K_{4,4}$$, and a graph that is definitely not pseudo-random.
+A subset pair which is $$\epsilon$$-pseduo-random doesn't have an area where most of its edges lie.
 
 ![random](\assets\pseudorandom.png)
 
 
 Next, a partition on $$V$$ into sets $$V_1,\cdots, V_k$$ is said to be **$$\epsilon$$-regular** if the following two conditions hold:
--- for all $$i,j \in [k]$$, $$||V_i|-|V_j|| \leq 1$$.
 
--- all except $$\epsilon k^2$$ pairs from the partition $$V_i,V_j$$, for $$i<j$$,  are $$\epsilon$$-pseudo-random
+1. For all $$i,j \in [k]$$, $$ \mid \vert V_i \vert-\vert V_j \vert \mid \leq 1$$.
 
-So, considering a partition on the vertices which is as close as can be to a $$k$$ equi-partition, most pairs in this partition have close to uniform edge density between them.
+2. All except $$\epsilon k^2$$ pairs of subsets from the partitions $$V_i,V_j$$, for $$i<j$$, are $$\epsilon$$-pseudo-random
+
+So, a partition on the vertices is  $$\epsilon$$-regular if it is  as close as can be to a $$k$$ equi-partition, and most pairs in this partition have close to uniform edge density between them.
 
 ### Formal statement
 
-**The Triangle Removal Lemma** For every $$\epsilon>0$$ there exists $$\delta>0$$ such that for any graph $$G$$ on $$n$$ vertices with at most $$\delta n^3$$ triangles, there exists a set of at most $$\epsilon n^2$$ edges, which when removed results in a triangle-free graph.
+Now with all the necessary definitions, it's time for the statement of the lemma and its proof!
+
+**The Triangle Removal Lemma**
+For every $$\epsilon>0$$ there exists $$\delta>0$$ such that for any graph $$G$$ on $$n$$ vertices where at least $$\epsilon n^2$$ edges must be removed in order to make it triangle-free, $$G$$ contains at least $$\delta n^3$$ triangles.
+
+A common equivalent statement is: for every $$\epsilon>0$$ there exists $$\delta>0$$ such that for any graph $$G$$ on $$n$$ vertices with at most $$\delta n^3$$ triangles, there exists a set of at most $$\epsilon n^2$$ edges, which when removed results in a triangle-free graph.
+
 
 #### Proof
 
-Let $$V_1, \cdots, V_k$$ be an $$\frac{\epsilon}{4}$$-regular partition on $$V$$. Edges which satisfy one of 3 conditions, to be enumerated soon, will be removed. Then it's argued that after these edges are removed the graph is triangle-free, and not too many edges have been removed.
+Let $$G$$ be a graph on $$n$$ vertices, where at least $$\epsilon n^2$$ edges must be removed in order to make the graph triangle-free. Let $$V_1, \cdots, V_k$$ be an $$\frac{\epsilon}{4}$$-regular partition on $$V$$. Such a partition exists by [Szemerédi's regularity lemma](https://en.wikipedia.org/wiki/Szemer%C3%A9di_regularity_lemma). Edges which satisfy one of 3 conditions, to be enumerated soon, will be removed. Then it's argued that at most $$\epsilon n^2$$ edges were removed and there are still at least $$\delta n^3$$ triangles in the graph.
 
 Remove edge $$(u,v)$$ from $$G$$ if:
 
 1. $$(u,v) \in V_i \times V_j$$ where $$(V_i,V_j)$$ is not an $$\frac{\epsilon}{4}$$-pseudo-random pair. Remember our definition for $$\epsilon$$-regular partitions allowed a few of the pairs to not have its edges uniformly distributed throughout the partition. So all edges between such pairs are removed.
 
-2. $$(u,v) \in V_i \times V_j$$ where $$d(V_i,V_j) < \frac{\epsilon}{2}$$. This condition states that we remove all edges between pairs in the partition which didn't have many edges between them to begin with.
+2. $$(u,v) \in V_i \times V_j$$ where $$d(V_i,V_j) < \frac{\epsilon}{2}$$. This condition states to remove all edges between pairs in the partition which didn't have many edges between them to begin with.
 
 3. $$v \in V_i $$ where $$ \mid V_i \mid \leq \frac{\epsilon}{4k}n$$. Any partitions that are small are removed. Thus obviously any edges with adjacencies in this partition are removed.
 
 At most, $$\frac{\epsilon}{4} k^2$$ pairs from the partition were not $$\frac{\epsilon}{4}$$-pseudo-random. Denote the set of such pairs by $$I$$. As the partition is close to an equi-partition, for all $$i \in [ k ]$$, $$\mid V_i \mid \leq \lfloor \frac{n}{k}\rfloor +1$$.
-Thus from condition 1, we remove at most $$\sum\limits_{(i,j) \in I} \mid V_i\mid\cdot \mid V_j\mid \leq \frac{\epsilon}{4} k^2 \cdot \frac{n^2}{k^2} = \frac{\epsilon}{4}n^2$$.
+Thus from condition 1, at most $$\sum\limits_{(i,j) \in I} \mid V_i\mid\cdot \mid V_j\mid \leq \frac{\epsilon}{4} k^2 \cdot \frac{n^2}{k^2} = \frac{\epsilon}{4}n^2$$ edges are removed.
 
-The number of edges in a simple graph on $$n$$ vertices is $$<n^2$$. Thus when we remove edges between pairs of partitions that have low density, specifically density $$<\frac{\epsilon}{2}$$, we remove $$<n^2 \frac{\epsilon}{2}$$ edges.
 
-By the second condition in the definition of $$\epsilon-$$regular, there is at most 1 small partition. If a partition has $$<\frac{\epsilon}{4k}n$$ vertices, then it contributes at most $$<\frac{\epsilon}{4k}n^2$$ edges. Thus at most $$k$$ partitions could be as small as specified, which would imply a total of $$<k \cdot \frac{\epsilon}{4k}n^2= \frac{\epsilon}{4}n^2$$ edges are removed when the vertices from those partitions are deleted. So in total we see that our 3 conditions for edge removal deleted only at most $$\epsilon \cdot n^2$$ edges.
+The number of edges in a simple graph on $$n$$ vertices is $$<n^2$$. When edges are removed between pairs of partitions that have low density, specifically density $$<\frac{\epsilon}{2}$$, at most  $$\frac{\epsilon}{2} \cdot n^2 $$ edges are removed.
 
-Now that we have removed "not too many edges", it remains to show that there are at least $$\delta \cdot n^3$$ triangles left in the graph, where $$\delta$$ is some constant yet to be determined. Consider a triangle that remains in the graph, and label the vertices of the triangle $$a,b,c$$. WLOG suppose that $$a \in V_1$$, $$b \in V_2$$, $$ c \in V_3$$. As these three edges were not removed, $$(V_1,V_2)$$, $$(V_2,V_3)$$, and $$(V_1,V_3)$$ are $$\frac{\epsilon}{4}$$-regular pairs with density $$\geq \frac{\epsilon}{2}$$. Lastly, $$ \mid V_i \mid >\frac{\epsilon}{4k}n$$ for $$i=1,2,3$$. Specifically, we'll use the facts that:
+If a partition has $$<\frac{\epsilon}{4k}n$$ vertices, then it contributes $$<\frac{\epsilon}{4k}n^2$$ edges. As there are $$k$$ parts, this implies $$<k \cdot \frac{\epsilon}{4k}n^2= \frac{\epsilon}{4}n^2$$ edges are removed when the vertices from those partitions are deleted. In total, the 3 conditions for edge removal deleted only at most $$\epsilon \cdot n^2$$ edges. Thus the graph still contains a triangle.
 
--- for any subset $$W_1 \subset V_1$$ such that $$\mid W_1 \mid > \frac{\epsilon}{4} \cdot \frac{n}{k}$$.
+It remains to show how many triangles are left in the graph after removing edges.
+Fix a triangle that remains in the graph, and label the vertices of the triangle $$a,b,c$$. WLOG suppose that $$a \in V_1$$, $$b \in V_2$$, $$ c \in V_3$$. As these three edges were not removed, $$(V_1,V_2)$$, $$(V_2,V_3)$$, and $$(V_1,V_3)$$ are $$\frac{\epsilon}{4}$$-regular pairs with density $$\geq \frac{\epsilon}{2}$$. Lastly, $$ \mid V_i \mid >\frac{\epsilon}{4k}n$$ for $$i=1,2,3$$.
 
---
-
-For $$a \in V_1$$, let $$W_2,W_3$$ be subsets of $$V_2$$ and $$V_3$$ respectively which are adjacent to $$a$$. As $$(V_2,V_3)$$ is now $$\frac{\epsilon}{4}$$ regular,
+Next, it's necessary to show that the number of vertices which have at least $$ \frac{\epsilon n}{4k}$$ adjacencies in both $$V_2$$ and $$V_3$$ is at least $$\frac{n}{2k}$$. Assume for sake of contradiction that there is a subset $$X \subset V_1$$ where $$ \mid X \mid \geq \frac{\epsilon n}{4k}$$ and every $$x \in X$$, has $$< \frac{\epsilon n}{4k}$$ adjacencies in $$V_2$$. Then checking the density between $$X$$ and $$V_2$$, $$d(X,V_2) < \frac{\mid X \mid \frac{\epsilon n}{4k}}{ \mid X \mid \mid V_2 \mid} = \frac{\epsilon}{4}$$, which breaks the assumptions that $$(V_1,V_2)$$ are $$\frac{\epsilon}{4}$$-regular pairs. The same applies for $$V_3$$, and the number of vertices which have $$< \frac{\epsilon n}{4k}$$ adjacencies in either $$V_2$$ or $$V_3$$ is
 
 $$
 \begin{align*}
-\mid e(W_2,W_3)\mid \geq \frac{\epsilon}{4} |W_2||W_3| \geq \frac{\epsilon}{4} \cdot  \left (frac{\epsilon \cdot n}{4 \cdot k} \right)^2 = \frac{\epsilon^3 \cdot n^2}{64k^2}
+\frac{n}{k}(1-2 \cdot \frac{\epsilon}{4}) > \frac{n}{2k}.
 \end{align*}
 $$
 
-We see that every edge between $$W_2$$ and $$W_3$$ forms a unique triangle. This was for an arbitrary $$a \in V_1$$, so summing over all vertices in $$V_1$$, the number of triangles is at least $$\frac{\epsilon^3 \cdot n^2}{64k^2} \cdot \frac{\epsilon \cdot n}{4 \cdot k} = \delta n^2$$.
+Thus there are at least $$\frac{n}{2k}$$ vertices in $$V_1$$ with at least $$\frac{\epsilon n}{4k}$$ adjacent vertices to both $$V_2$$ and $$V_3$$. For such an $$a \in V_1$$, let $$W_2,W_3$$ be subsets of $$V_2$$ and $$V_3$$ respectively which are adjacent to $$a$$. As $$(V_2,V_3)$$ is $$\frac{\epsilon}{4}$$ regular,
+
+$$
+\begin{align*}
+\mid e(W_2,W_3)\mid \geq \frac{\epsilon}{4} |W_2||W_3| \geq \frac{\epsilon}{4} \cdot  \left (\frac{\epsilon  n}{4 k} \right)^2 = \frac{\epsilon^3 \cdot n^2}{64k^2}
+\end{align*}
+$$
+
+Every edge between $$W_2$$ and $$W_3$$ forms a unique triangle. This was for an arbitrary $$a \in V_1$$, so summing over all vertices in $$V_1$$, the number of triangles is at least
+
+ $$
+\begin{align*}
+\sum\limits_{i=1}^{\frac{n}{2k}} \frac{\epsilon^3 \cdot n^2}{64k^2}=
+\frac{\epsilon^3 \cdot n^2}{64k^2} \cdot \frac{ n}{2 k} = \delta n^3, \text{ for } \delta = \frac{\epsilon^3}{128k^3}.
+\end{align*}
+$$
+
+### What just happened?
+
+The regularity lemma shed light on the substructure of the graph. This substructure is easier to analyze than the full graph (this is a very common purpose for the regularity lemma). Even further, the edges which were removed left a graph with triangles that were easy to find and count.
+
+If you liked this... good for you. I get sick of triangles sometimes.
