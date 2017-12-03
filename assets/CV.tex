@@ -1,0 +1,237 @@
+\documentclass[11 pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+%  \renewcommand{\encodingdefault}{cg}
+  %\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \selectfont{\textsc{#1}}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} \hfill #2\\ \underline{\textbf{#3}}\\  }}
+\newcommand{\employerss}[3]{{ \textbf{#1} \hfill (#2)\\ \underline{\textbf{#3}}\\  }}
+\newcommand{\employerzz}[2]{{ \textbf{#1} \hfill(#2)\\  }}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+#2 \lineunder 
+#3
+\end{center}
+\vspace*{-8pt}
+}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newcommand{\schoolwithcourses}[4]{
+ \textbf{#1} #2 #3\\ 
+#4 \\
+
+\vspace*{5pt}
+}
+\newcommand{\school}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\ 
+#4 \\
+}
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-65pt}
+% Title bar
+{\fontsize{35}{40}\hspace*{-15pt}\selectfont\bf{Samantha E. Davies}}
+  {\hfill
+%  \begin{tabular}{c c}
+%    906 El Cajon Way &  craffel@ccrma.stanford.edu\\
+%    Palo Alto, CA 94303 & 507-398-2646 \\ 
+%  \end{tabular}
+ %   \begin{tabular}{c c}
+   %     sedavies@andrew.cmu.edu & SMC 5046, CMU\\
+     %   (717)-507-9253 & Pittsburgh, PA 15289\\
+     %\end{tabular}
+
+
+\vspace{2 mm}
+
+{\fontsize{11}{5}{\header{\selectfont{Contact Information}}}
+\vspace{1mm}
+Email: daviess@uw.edu  \qquad 
+%Address: 1800 N 35th St \#5, Seattle WA, 98103 \\ 
+\vspace{1mm}
+
+
+\header{Education}
+\vspace{2mm}
+
+\employer{University of Washington}{09/2016-present}{}
+%\schoolwithcourses{Carnegie Mellon University}
+\vspace{-4mm}
+Degree: PhD in Mathematics\\
+Cumulative QPA: 3.82/4.0\\
+%In Major QPA: 3.77/4.0\\
+
+\vspace{2 mm}
+\employer{University of Illinois at Chicago}{08/2015-07/2016}{}
+%\schoolwithcourses{Carnegie Mellon University}
+\vspace{-4mm}
+Degree:  MS in Mathematics \\
+Cumulative QPA: 3.84/4.0\\
+\vspace{2 mm}
+\employer{Carnegie Mellon University}{08/2011-05/2015}{}
+%\schoolwithcourses{Carnegie Mellon University}
+\vspace{-4mm}
+Degree: BS in Mathematical Sciences, minor in Economics \hspace{25mm} College and University Honors\\
+Cumulative QPA: 3.78/4.0\\
+%In Major QPA: 3.77/4.0\\
+
+
+
+
+\vspace{2mm}
+\header{Research Experience}
+\vspace{2mm}
+\employer{UW- Paul G. Allen School of Computer Science and Engineering }{06/2017-present} {Healthcare and mechanism design (ongoing)}
+\vspace{2mm}
+	\begin{achievements}
+		\item Performed research under the direction of Anna Karlin, a Microsoft Professor in the CSE department at UW 
+		\item Studied adverse selection settings to  understand and tackle the challenges of allocating healthcare 
+		\item Constructed a deterministic algorithm for the FedEx problem and proved results on its performance compared to the optimal randomized algorithm
+	\end{achievements}
+
+\employer{UIC- Department of Mathematics, Statistics, and Computer Science }{10/2015-06/2016} {Planted clique }
+\vspace{2mm}
+
+	\begin{achievements}
+		\item Performed research with a group of UIC Ph.D. students under the direction of Lev Reyzin, an Assistant Professor in the MSCS department at UIC
+		\item Studied variants of the planted clique problem and other graph distinguishing problems using statistical algorithms. Work for this project is ongoing
+	\end{achievements}
+
+\employer{Carnegie Mellon University- Department of Mathematical Sciences }{02/2015-05/2015} {Knight's tour}
+\vspace{2mm}
+
+	\begin{achievements}
+		\item Performed research under the direction of Carl Yerger, who was a Shelly Visiting Professor at CMU
+		\item Implemented algorithms which can find knight's tours on small Aztec diamonds and showed traditional inductive arguments for knight's tours fail for Aztec diamonds
+		\item The resulting paper, \textit{Algorithms for Finding Knight's Tours on Aztec Diamonds}, has been accepted for publication in \textit{Involve: A Journal of Mathematics}
+
+	\end{achievements}
+
+\employer{Brown University- Department of Applied Mathematics }{06/2014-08/2014} {Leadership Alliance Summer Research Program}
+\vspace{2mm}
+
+	\begin{achievements}
+\item Performed research under the direction of Johnny Guzman, an Associate Professor of Applied Mathematics at Brown University
+\item Numerically and analytically examined the behavior of solutions of the one dimensional generalized model vorticity equation in search of determining whether solutions to the three dimension Euler Equations exist globally
+	\end{achievements}
+	
+\employer{Carnegie Mellon University- Department of Mathematical Sciences}{06/2013-08/2013}{Summer Undergraduate Applied Mathematics Institute }
+\vspace{2mm}
+
+	\begin{achievements}
+	\item Studied signal processing, mathematical software and other topics with a group of 14 other mathematics students from across the country
+	\item Performed research under the direction of Gregory Johnson, an Assistant Teaching Professor of Mathematics at CMU
+	\item Discovered and proved properties in binomial coefficients produced using the factorial defined by Manjul Bhargava over geometric progressions
+		\end{achievements}
+	
+\clearpage		
+\header{Teaching}
+\begin{achievements}
+\item{\textbf{Math 124 }(Calculus I, Winter  \& Spring 2017 )\\
+Taught 2 active learning styled sections twice each week, held weekly office hours, graded exams and weekly quizzes. }
+\item{\textbf{Math 126 }(Multivariable Calculus, Fall 2016)\\
+Taught 2 lecture styled sections twice each week, held weekly office hours, graded exams and weekly quizzes. }
+\item{\textbf{Math 121 }(UIC Pre-Calculus, Fall 2015 and Spring 2016)\\ 
+Taught 3 active learning styled sections twice each week, held weekly office hours,  graded exams. }
+\item{\textbf{21-241 }(CMU Matrices and Linear Transformations, Spring 2015)\\
+Taught 1 lecture styled section twice each week, held weekly office hours, graded exams and weekly homeworks }
+\item{{\textbf {with high probability}}\\
+Manage my math blog with high probability, https://samidavies.wordpress.com. Some posts are about topics in advanced mathematics, but most are aimed towards a general audience and motivated by real world examples! (My first year at UW really hindered my writing, but after September 13th 2017, 4pm EST, it should pick back up again.) }
+\\
+\end{achievements}
+
+
+%\header{Presentations}
+%\begin{achievements}
+%\item \textbf{Davies, S.}, Yalla, G. (2014) \textit{On Globally Defined Solutions of the Generalized CLM Equation} \\
+%2015 CMU Meeting of the Minds. Pittsburgh, PA\\
+%2015 Joint Mathematics Meeting. San Antonio, TX\\
+% 2014 Leadership Alliance National Symposium. Stamford, CT
+%\end{achievements}
+
+
+\header{Management and Leadership Experience}
+\begin{achievements}
+\item Community Advisor for Morewood Gardens- \hspace{58mm} 08/2014-05/2015 	 
+\vspace{2mm}
+
+Assisted in the selection, hiring, and training of a staff of 11 Resident Assistants. Lead the house staff in the development of a shared house vision for 470 residents, while serving as an active point of interface between the house community and the greater CMU community.
+\vspace{1mm}
+\item Resident Assistant for Morewood E-Tower, Donner House- \hspace{37mm} 08/2012-05/2013
+\vspace{2mm}
+
+Was responsible for providing educational programs and paraprofessional counseling for a residence wing of 35 women while resolving issues on diversity, alcohol/ drug abuse, academic performance and social acceptance for a building of 240 first year students. Conducted the live-out mentor program by organizing and fostering mentor-mentee relationships and coordinating various administrative tasks in support of mentor activities.
+\vspace{1mm}
+\item Vice President for Kappa Kappa Gamma: Delta Xi Chapter \hspace{34mm} 01/2013-12/2013
+\end{achievements}
+
+\header{Programming Languages}
+\vspace{1mm}
+Experience working with \LaTeX, Python, Maple, Matlab
+\vspace{3mm}
+
+\header{Relevant Coursework}
+\vspace{1 mm}
+\textbf{Carnegie Mellon University}:\\
+Discrete Mathematics (2 semesters) $\qquad$ 
+Real Analysis (2 semesters) $\qquad$
+Principles of Computing $\qquad$
+Linear Algebra (2 semesters) $\qquad$ \hspace{9mm}
+Differential Equations $\qquad$  \hspace{8mm}
+Operations Research $\qquad$
+Mathematical Finance (2 semesters) \hspace{6mm}
+Numerical Methods $\qquad$  \hspace{11mm}
+Algebraic Structures $\qquad$ 
+Probability (2 semesters) $\qquad$   \hspace{15mm}
+Combinatorics $\qquad$ $\qquad$ \hspace{11mm}
+Graph Theory \vspace{2mm}
+
+\textbf{University of Illinois at Chicago}:\\
+The Probabilistic Method  $\qquad$ $\qquad$  \hspace{6mm}
+Computer Algorithms II $\qquad$  \hspace{3mm}
+Discrete Geometry $\qquad$ 
+Foundations in Data Science $\qquad$ \hspace{10 mm}
+Measure Theory $\qquad$ \hspace{15 mm}
+Complex Analysis 
+\vspace{2mm}
+ 
+ \textbf{University of Washington}:\\
+Adv. Linear Algebra (2 quarters)  $\qquad$       
+Modern Algebra (3 quarters) $\qquad$      
+Complex Analysis (3 quarters) $\qquad$ 
+  \vspace{2mm}
+
+
+
+
+%\employer{Carnegie Mellon University- Department of Student Life}{2012-present}{Resident Assistant}
+%	\begin{achievements}
+%	\item Was responsible for providing educational programs and paraprofessional counseling for a residence wing of 35 women while resolving issues on diversity, alcohol/ drug abuse, academic performance and social acceptance for a building of 240 first year students.
+%	\item Conducted the live-out mentor program by organizing and fostering mentor-mentee relationships and coordinating various administrative tasks in support of mentor activities.
+
+%	\end{achievements}
+
+%\employer{Carnegie Mellon University- Department of Student Life}{2014-present}{Community Advisor}
+%	\begin{achievements}
+%	\item Assisted in the selection, hiring and training of a staff of 11 Resident Assistants.
+%	\item Will lead the house staff in the development of a shared house vision for 470 residents, while serving as an active point of interface between the house community and the greater CMU community.
+%	\end{achievements}
+
+
+\end{document}
