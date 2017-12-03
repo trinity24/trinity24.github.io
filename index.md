@@ -9,7 +9,7 @@ the theory group in the [Paul G. Allen School of CSE](https://www.cs.washington.
 
 
 
-Before coming to UW, earned my BS from
+Before coming to UW, I earned my BS from
 [Carnegie Mellon University](http://www.math.cmu.edu/index.php),
 and then my Master's degree from [UIC](https://www.math.uic.edu). 
 
