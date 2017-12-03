@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Sami Davies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Sami Davies, PhD Student at the University of Washington">
+    <link rel="canonical" href="http://mwillsey.com">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<div id="container">
 
-  {% include head.html %}
+    <aside>
+        <div id="photo">
+            <img alt="Max Willsey" src="/assets/max.jpg">
+            <h1> Sami Davies  </h1>
+        </div>
+        <section id="contact">
+            <address>
+                <a href="https://github.com/mwillsey">CV</a>
+            </address>
+             <address>
+                <a href="https://samidavies.wordpress.com">Blog</a>
+            </address>
+            <input type="checkbox" id="academic-links" class="toggle-input">
+            <label class="toggle-label" for="academic-links">Academic Links</label>
+            <div class="toggle-content">
+                <address>
+                    <a href="/assets/max-willsey-cv.pdf">Curriculum Vitae</a>
+                </address>
+                <address>
+                    <a href="https://orcid.org/0000-0001-8066-4218">ORCID</a>
+                </address>
+                <address>
+                    <a href="http://dblp.uni-trier.de/pers/hd/w/Willsey:Max">DBLP</a>
+                </address>
+                <address>
+                    <a href="https://scholar.google.com/citations?user=zko9-RwAAAAJ&hl=en">Google Scholar</a>
+                </address>
+            </div>
+        </section>
+    </aside>
 
-  <body>
+    <main>
+        {{ content }}
+    </main>
+</div>
 
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
-
-  </body>
-
+</body>
 </html>

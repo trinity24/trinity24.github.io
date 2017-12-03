@@ -1,22 +1,31 @@
 ---
 layout: default
 ---
+I'm a second year Ph.D student in the
+[Department of Mathematics](https://math.washington.edu) at the 
+University of Washington. 
+I work between the optimization group in the math department and
+the theory group in the [Paul G. Allen School of CSE](https://www.cs.washington.edu).
 
 
-This site has moved to [https://samidavies.wordpress.com/](https://samidavies.wordpress.com/)
+
+Before coming to UW, earned my BS from
+[Carnegie Mellon University](http://www.math.cmu.edu/index.php),
+and then my Master's degree from [UIC](https://www.math.uic.edu). 
 
 
- <br>
+## News
 
-  <h1 class="page-heading">Posts</h1>
+<section id="news">
+{% for post in site.posts %}
+{% if post.news == true %}
+<div class="news-item">
+<div class="date"> {{ post.date | date: "%b&nbsp;%-d" }} </div>
+<div class="content"> {{ post.content }} </div>
+</div>
+{% endif %}
+{% endfor %}
+</section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-      </li>
-    {% endfor %}
-  </ul>
+## Papers
 
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl}}">via RSS</a></p>

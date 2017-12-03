@@ -1,0 +1,116 @@
+---
+---
+/* ^ needed for jekyll */
+
+$accent: firebrick;
+$dim:    #999;
+
+$desktop-width: 40em;
+
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+body {
+    font-family: Palatino, serif;
+    margin: 0 auto; /* center the page */
+    max-width: $desktop-width + 10em;
+}
+
+a {
+    text-decoration: none;
+    color: $accent;
+}
+
+a:hover, a:focus, a.active {
+    text-decoration: underline;
+}
+
+.hide p {
+	  padding:10px;
+	  margin:0
+}
+
+// input should come first
+.toggle-input {
+    display: none;
+
+    &:checked {
+        & ~ .toggle-label:after {
+            content: ' –';
+        }
+        & ~ .toggle-content {
+            height: auto;
+        }
+    }
+
+}
+.toggle-label:after {
+    content: ' +';
+}
+.toggle-content {
+    height: 0;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+aside {
+    flex: 1 100%;
+    margin: 1em;
+    @include desktop {
+        flex: 1 0;
+    }
+}
+
+main {
+    flex: 1 100%;
+    margin: 1em;
+    @include desktop {
+        flex: 3 0;
+    }
+}
+
+img {
+    max-width: 150px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 3px solid $dim;
+}
+
+#papers {
+    dt { font-size: 120%; }
+    dd+dt { padding-top: 1em; }
+
+    dd { margin: 0 1em; }
+    .author .me { font-weight:bold; }
+}
+
+.news-item {
+    display: flex;
+    flex-flow: row wrap;
+
+    .date {
+        color: $dim;
+        padding-bottom: 0.5em;
+        @include desktop {
+            flex: 1;
+            text-align: right;
+            padding-right: 1em;
+        }
+    }
+
+    .content {
+        @include desktop {
+            flex: 5;
+        }
+        padding-bottom: 1em;
+    }
+    /* needed to ignore p from jekyll in news entries */
+    .content>p { display: inline; margin: 0 }
+}
