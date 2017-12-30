@@ -1,0 +1,48 @@
+<dt>
+    {% include link.html
+        url=paper.link
+        text=paper.title
+        class="paper-title"
+    %}
+</dt>
+    
+    
+<dd class="paper-authors">
+    <ul class="comma-list">
+        {% for a_key in paper.authors %}
+            {% assign a = site.data.people[a_key] %}
+            {%- if a_key == "mwillsey" -%}
+                {% assign class = "author me" %}
+            {%- else -%}
+                {% assign class = "author" %}
+            {%- endif -%}
+    
+            <li>
+                {%- include link.html
+                url=a.webpage
+                text=a.name
+                class=class
+                -%}
+            </li>
+        {% endfor %}
+    </ul>
+</dd>
+
+{% if paper.venue %}
+    <dd class="paper-venue">
+    {%- include link.html url=paper.venue_url text=paper.venue -%}, {{ paper.date | date: '%B %Y' }}
+    </dd>
+{% endif %} 
+
+{% if paper.extra %}
+    <dd> {{ paper.extra | markdownify | remove: "<p>" | remove: "</p>"}} </dd>
+{% endif %}
+
+<dd>
+    {% for link in paper.links %} [
+    <a href="{{ link.url }}">{{ link.text }}</a>] 
+    {% endfor %} 
+    {% unless paper.content == "" %}
+        [<a href="{{ paper.url }}">bibtex</a>]
+    {% endunless %}
+</dd>

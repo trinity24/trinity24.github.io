@@ -3,3 +3,9 @@ _site
 .jekyll-metadata
 .DS_Store
 
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+assets/headshot_subway.jpg.sb-1ba0a494-0irVvq

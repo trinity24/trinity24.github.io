@@ -6,45 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
           content="Sami Davies, PhD Student at the University of Washington">
-    <link rel="canonical" href="http://mwillsey.com">
+    <link rel="canonical" href="http://samidavies.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-<div id="container">
+<div class="container">
 
-    <aside>
-        <div id="photo">
-            <img alt="Sami Davies" src="/assets/headshot2.jpg">
-            <h1> Sami Davies  </h1>
-        </div>
-        <section id="contact">
-            <address>
-                <a href="/assets/CV.pdf">CV</a>
-            </address>
-             <address>
-                <a href="https://samidavies.wordpress.com">Blog</a>
-            </address>
-            {% comment %}
-            <input type="checkbox" id="academic-links" class="toggle-input">
-            <label class="toggle-label" for="academic-links">Academic Links</label>
-            <div class="toggle-content">
-                <address>
-                    <a href="/assets/max-willsey-cv.pdf">Curriculum Vitae</a>
-                </address>
-                <address>
-                    <a href="https://orcid.org/0000-0001-8066-4218">ORCID</a>
-                </address>
-                <address>
-                    <a href="http://dblp.uni-trier.de/pers/hd/w/Willsey:Max">DBLP</a>
-                </address>
-                <address>
-                    <a href="https://scholar.google.com/citations?user=zko9-RwAAAAJ&hl=en">Google Scholar</a>
-                </address>
-            </div>
-            {% endcomment %}
-        </section>
-    </aside>
-
+    <header class="d-flex flex-column flex-md-row justify-content-md-between ">
+        <h2 style="color:rgb(163, 108, 202);" class="text-center">
+            Sami Davies
+        </h2>
+        <nav class="nav justify-content-center">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="https://samidavies.wordpress.com">Blog</a>
+            <a class="nav-link" href="/assets/CV.pdf">CV</a>
+        </nav>
+    </header>
+    <hr>
     <main>
         {{ content }}
     </main>

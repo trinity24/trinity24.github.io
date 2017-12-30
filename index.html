@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="row align-items-center mt-3 mb-4 ">
+    <div class="col-md">
+        <img class="img-fluid d-block mx-auto" alt="Sami Davies" title="Sami Davies" src="/assets/headshot_subway.jpg" width="150"
+            height="50">
+    </div>
+    <address class="col-md ">
+        <strong>Math Ph.D. Student</strong>
+        <br>
+        <strong>University of Washington </strong>
+        <br>
+        <a href="mailto:daviess@uw.edu">
+            daviess@uw.edu
+        </a>
+        <br>
+        <strong>Office: PDL C-404 </strong>
+    </address>
+</div>
+
+I'm a second year Ph.D. student in the
+<a href="https://math.washington.edu">
+    Department of Mathematics
+</a>
+at the University of Washington. 
+I work between the optimization group in the math department and
+the theory group in the
+ <a href="https://www.cs.washington.edu">
+    Paul G. Allen School of CSE
+</a>.
+<br>
+<br>
+Before coming to UW, I earned my B.S. from
+<a href="http://www.math.cmu.edu/index.php">
+Carnegie Mellon University
+</a>
+and then my M.S. from 
+<a href="https://www.math.uic.edu">
+the University of Illinois at Chicago</a>. 
+
+
+<h3 style="color:Indigo;">News</h3>
+
+
+<section id="news">
+    {% for post in site.posts %} {% if post.news == true %}
+    <div class="news-item">
+        <div class="date"> {{ post.date | date: "%b&nbsp;%-d" }} </div>
+        <div class="content"> {{ post.content }} </div>
+    </div>
+    {% endif %} {% endfor %}
+</section>
+
+<h3 style="color:Indigo;">Recent Papers</h3>
+<section id="papers">
+        {% assign bibs-newest-first = site.bib | reverse %}
+        {% for paper in bibs-newest-first %}
+          {% include paper.html paper=paper %}
+        {% endfor %}
+</section>
+
+
+

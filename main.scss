@@ -2,8 +2,8 @@
 ---
 /* ^ needed for jekyll */
 
-$accent: firebrick;
-$dim:    #999;
+$accent: Indigo;
+$dim:  rgb(163, 108, 202);
 
 $desktop-width: 40em;
 
@@ -13,15 +13,16 @@ $desktop-width: 40em;
     }
 }
 
+// "Helvetica Neue"
 body {
-    font-family: Palatino, serif;
+    font-family: Georgia, Helvetica,  sans-serif;
     margin: 0 auto; /* center the page */
     max-width: $desktop-width + 10em;
 }
 
 a {
     text-decoration: none;
-    color: $accent;
+    // color: $accent;
 }
 
 a:hover, a:focus, a.active {
@@ -60,30 +61,31 @@ a:hover, a:focus, a.active {
     flex-flow: row wrap;
 }
 
-aside {
-    flex: 1 100%;
-    margin: 1em;
-    @include desktop {
-        flex: 1 0;
-    }
-}
+// aside {
+//     flex: 1 100%;
+//     margin: 1em;
+//     @include desktop {
+//         flex: 1 0;
+//     }
+// }
 
-main {
-    flex: 1 100%;
-    margin: 1em;
-    @include desktop {
-        flex: 3 0;
-    }
-}
+// main {
+//     flex: 1 100%;
+//     margin: 1em;
+//     @include desktop {
+//         flex: 3 0;
+//     }
+// }
 
 img {
     max-width: 150px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 3px solid $dim;
+    border: 3px solid $accent;
 }
 
-#papers {
+
+#papers { 
     dt { font-size: 120%; }
     dd+dt { padding-top: 1em; }
 
@@ -91,7 +93,8 @@ img {
     .author .me { font-weight:bold; }
 }
 
-.news-item {
+
+.news-item { 
     display: flex;
     flex-flow: row wrap;
 

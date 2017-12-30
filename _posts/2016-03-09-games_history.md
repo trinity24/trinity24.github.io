@@ -3,8 +3,8 @@ layout: post
 title:  A Brief History of Common Games (1)
 date:   2016-03-09
 categories: post
+news: false
 ---
-
 
 ### Major disclaimer
 This is a post about some of the history behind the solvability of a few common games.
