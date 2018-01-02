@@ -94,6 +94,19 @@ img {
 }
 
 
+.comma-list {
+    display: inline;
+    padding: 0;
+
+    li {
+        display: inline;
+        list-style: none;
+        &:after { content: ", " }
+        &:last-child:after { content: "" }
+}
+}
+
+
 .news-item { 
     display: flex;
     flex-flow: row wrap;
