@@ -2,7 +2,7 @@
 layout: post
 title: "Life@IIIT - 2016-17"
 img: IMG_8145.JPG # Add image post (optional) Blog/bef/assets/img
-
+date: 2017-06-24
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 tag: [Travel, Blogging, Mountains]
 ---
