@@ -19,16 +19,15 @@ layout: default
     </address>
 </div>
 
-I'm a second year Ph.D. student in the
-<a href="https://math.washington.edu">
-    Department of Mathematics
-</a>
-at the University of Washington. 
-I work between the optimization group in the math department and
-the theory group in the
- <a href="https://www.cs.washington.edu">
-    Paul G. Allen School of CSE
-</a>.
+I'm a Ph.D. student at the University of Washington, where I work between the optimization group in the<a href="https://math.washington.edu">
+Department of Mathematics
+</a> and
+the
+<a href="http://theory.cs.washington.edu"> theory group</a>
+ in the
+Paul G. Allen School of CSE. I'm fortunate to be advised by
+<a href = "https://sites.math.washington.edu/~rothvoss/index.html"> Thomas Rothvoss</a>.
+
 <br>
 <br>
 Before coming to UW, I earned my B.S. from
@@ -52,13 +51,34 @@ the University of Illinois at Chicago</a>.
     {% endif %} {% endfor %}
 </section>
 
+<h3 style="color:Indigo;">Current Research</h3>
+<section id="research">
+    {% for post in site.posts %} {% if post.research == true %}
+    <div class="news-item">
+        <div class="date"> {{ post.title | title: "%b&nbsp;%-d" }}</div>
+        <div class="content"> {{ post.content }} </div>
+    </div>
+    {% endif %} {% endfor %}
+<section>
+
 <h3 style="color:Indigo;">Recent Papers</h3>
 <section id="papers">
         {% assign bibs-newest-first = site.bib | reverse %}
         {% for paper in bibs-newest-first %}
           {% include paper.html paper=paper %}
         {% endfor %}
+        <br>
 </section>
 
+
+<h3 style="color:Indigo;">Personal, but Work Related</h3>
+<section id="personal">
+    {% for post in site.posts %} {% if post.personal == true %}
+    <div class="news-item">
+        <div class="date"> {{ post.title | title: "%b&nbsp;%-d" }}</div>
+        <div class="content"> {{ post.content }} </div>
+    </div>
+    {% endif %} {% endfor %}
+<section>
 
 
