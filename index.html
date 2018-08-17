@@ -63,7 +63,7 @@ the University of Illinois at Chicago</a>.
 
 <h3 style="color:Indigo;">Recent Papers</h3>
 <section id="papers">
-        {% assign bibs-newest-first = site.bib | reverse %}
+        {% assign bibs-newest-first = site.bib | reverse %} 
         {% for paper in bibs-newest-first %}
           {% include paper.html paper=paper %}
         {% endfor %}

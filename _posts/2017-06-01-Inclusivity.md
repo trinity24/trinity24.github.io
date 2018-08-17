@@ -11,5 +11,3 @@ personal: true
 * I teach incarcerated women math through [FEPPS](http://fepps.org). I'm always interested in having discussions about prison reform.
 
 * I started volunteering at UW's [Math Circles](https://sites.math.washington.edu/~mathcircle/circle/) during the Spring of 2018.
-
-* [Sam Fairchild](http://sites.math.washington.edu/~skayf/index.html), [Kellie MacPhee](https://sites.math.washington.edu/~kmacphee/), and I are co-founding the Washington [Directed Reading Program](https://www.drp-network.org). The program will begin during the Fall 2018 quarter.
