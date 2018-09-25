@@ -16,7 +16,7 @@
 \newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
 \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
 \newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \selectfont{\textsc{#1}}} \vspace*{-6pt} \lineunder}
-\newcommand{\employer}[3]{{ \textbf{#1} \hfill #2\\ \textbf{#3}\\  }}
+\newcommand{\employer}[3]{{ \textbf{#1} \hfill #2 \\ #3\\  }}
 \newcommand{\employerss}[3]{{ \textbf{#1} \hfill (#2)\\ \textbf{#3}\\  }}
 \newcommand{\employerzz}[2]{{ \textbf{#1} \hfill(#2)\\  }}
 \newcommand{\contact}[3]{
@@ -46,8 +46,16 @@
 \smallskip
 \vspace*{-65pt}
 % Title bar
-{\fontsize{20}{30}\textbf{Sami Davies} }\\
+\begin{flushright}
+Department of Mathematics\\
+University of Washington\\
 daviess@uw.edu
+\end{flushright}
+
+\begin{center}
+	\vspace{-48pt}
+{\fontsize{20}{30}\textbf{Sami Davies} }
+\end{center}
 %  {\hfill
 %  \begin{tabular}{c c}
 %    906 El Cajon Way &  craffel@ccrma.stanford.edu\\
@@ -61,175 +69,188 @@ daviess@uw.edu
 
 %\vspace{2 mm}
 
-%{\fontsize{11}{5}{\header{\selectfont{Contact Information}}}
-%\vspace{1mm}
-%\begin{flushleft}
-%Email: daviess@uw.edu  
-%\end{flushleft}
-%Address: 1800 N 35th St \#5, Seattle WA, 98103 \\ 
-
-
-\bigskip
+% {\fontsize{11}{5}{\header{\selectfont{Contact Information}}}
+% \vspace{1mm}
+% \begin{flushleft}
+% Email: daviess@uw.edu  
+% \end{flushleft}
+% Address: 1800 N 35th St \#5, Seattle WA, 98103 \\ 
 
 \header{Education}
 
 \bigskip
-\employer{University of Washington}{September 2016 - present}{}
+\employer{University of Washington}{2016 - present}{~}
 %\schoolwithcourses{Carnegie Mellon University}
 \vspace{-4mm}
-Ph.D. in Mathematics\\
-3.86/4.0
+Ph.D. in Mathematics
+% 3.86/4.0
 %In Major QPA: 3.77/4.0\\
  \bigskip
 
-\employer{University of Illinois at Chicago}{August 2015 - July 2016}{}
+\employer{University of Illinois at Chicago}{2015-2016}{~}
 %\schoolwithcourses{Carnegie Mellon University}
 \vspace{-4mm}
-M.S. in Mathematics (enrolled in Ph.D. program)\\
- 3.84/4.0
+M.S. in Mathematics 
+%  3.84/4.0
  \bigskip
 
-\employer{Carnegie Mellon University}{August 2011 - May 2015}{}
+\employer{Carnegie Mellon University}{2011-2015}{~}
 %\schoolwithcourses{Carnegie Mellon University}
 \vspace{-4mm}
-B.S. in Mathematical Sciences, minor in Economics \\
-College and University Honors\\
-3.78/4.0\\
+B.S. in Mathematical Sciences, Minor in Economics 
+% 3.78/4.0\\
 
 
 \bigskip
 
-%\vspace{2mm}
-\header{Current Projects}
+
 \bigskip
 
-
-\employer{The Santa Claus Problem}{October 2017 - present} {Thomas Rothvoss: UW}
-\smallskip
-	\begin{achievements}
-		\item Constructing an approximation algorithm for the Santa Claus problem, a 
-		variant of the classic NP-complete jobs/machines scheduling problem
-		\item Primarily using techniques from matroid optimization and graph theory
-	\end{achievements}	
-\bigskip	
-
-
- \header{Past Projects}
- \bigskip
-
-\employer{Mechanism Design: Healthcare \& the FedEx Problem }{June 2017 - October 2017} {Anna Karlin: UW}
-\smallskip	
-\begin{achievements}
-		\item Examined economists' work in adverse and advantageous selection settings to understand the
-		issues arising in healthcare allocation from the perspective of mechanism design 
-		\item Designed and proved results for a deterministic algorithm for the FedEx problem, which seeks to design a pricing system for package deliveries
-	\end{achievements}
-\bigskip
-
-\employer{Planted Clique}{October 2015 - June 2016} {Lev Reyzin: UIC}
-\smallskip
-	\begin{achievements}
-		\item Studied variants of the planted clique problem and other graph distinguishing
-		 problems using statistical algorithms
-	\end{achievements}
-\bigskip
-
-
-\employer{Knight's Tours on Aztec Diamonds }{February 2015 - May 2015} {Carl Yerger: CMU and Davidson College}
-\smallskip
-	\begin{achievements}
-		\item Implemented algorithms that find knight's tours on small Aztec diamonds
-		\item Proved traditional inductive arguments for knight's tours fail for Aztec diamonds
-	\end{achievements}
-
-\clearpage
-
-\employer{Examining Euler Equations }{June 2014 - August 2014} {Johnny Guzman: Brown University}
-\smallskip
-
-	\begin{achievements}
-	\item Research was performed under the Leadership Alliance Summer Research Program at Brown University, which aims to prepare underrepresented groups for graduate school
-	\item Numerically and analytically examined the behavior of solutions of the one dimensional generalized 
-	model vorticity equation 
-	%in search of determining whether solutions to the three dimension Euler Equations exist globally
-	\end{achievements}
-\bigskip
-
-\employer{Binomial Coefficients with the Bhargava Factorial}{June 2013 - August 2013}{Gregory Johnson: CMU}
-\smallskip
-
-	\begin{achievements}
-	\item Research was performed during the 2013 Summer Undergraduate Applied Mathematics Institute at CMU
-	\item Discovered properties in binomial coefficients produced using the factorial defined by 
-	Manjul Bhargava over geometric progressions
-	%\item Studied signal processing and mathematical software with a group of 14 other 
-	%mathematics students		
-	\end{achievements}
-\bigskip
-
-\header{Publications and Presentations}
+\header{Publications}
 \begin{enumerate}
-\item Samantha Davies, Chenxiao Xue, Carl R. Yerger, ``Algorithms for finding knight's tours on Aztec diamonds,'' 
+\item Sami Davies, Thomas Rothvoss, Yihao Zhang. ``A Tale of Santa Claus, Hypergraphs and Matroids,'' in submission. 
+\item Sami Davies, Chenxiao Xue, Carl R. Yerger, ``Algorithms for finding knight's tours on Aztec diamonds,'' 
 \textit{Involve, a Journal of Mathematics}, Vol. 10 (2017), No. 5, 721-734.
+\end{enumerate}
+
+\header{Presentations}
+\begin{enumerate}
 \item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. MAA Undergraduate Poster Session: 2015 Joint Mathematics Meeting. Joint presentation with Gopal Yalla.
-\item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. 2014 Leadership Alliance National Symposium.
+\item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. 2014 Leadership Alliance National Symposium. Joint presentation with Gopal Yalla.
 \item \textit{Searching for Combinatorial Interpretations Using the Bhargava Defined Factorial}. 2013 Summer Undergraduate Applied Mathematics Institute Symposium. Joint presentation with Joe Gault.
 \end{enumerate}
 
+\header{Invited participation}
 \bigskip
+\employer{Women in Theory}{June 2018}{~}
+
+
+\employer{Leadership Alliance Summer Research Program}{Summer 2014} {Brown University}
+\textit{Examining Euler Equations}. Joint work with Professor Johnny Guzman and Gopal Yalla 
+
+\bigskip
+
+\employer{Summer Undergraduate Applied Mathematics Institute}{Summer 2013}{CMU}
+\textit{Patterns of the Bhargava Defined Factorial}. Joint work with Joe Gault and Professor Gregory Johnson.
+
+\clearpage
+
+%\vspace{2mm}
+% \header{Other past projects}
+% \bigskip
+
+
+% \employer{Mechanism Design: Healthcare \& the FedEx Problem }{June 2017 - October 2017} {Anna Karlin: UW}
+% \smallskip	
+% \begin{achievements}
+% 		\item Examined economists' work in adverse and advantageous selection settings to understand the
+% 		issues arising in healthcare allocation from the perspective of mechanism design 
+% 		\item Designed and proved results for a deterministic algorithm for the FedEx problem, which seeks to design a pricing system for package deliveries
+% 	\end{achievements}
+% \bigskip
+
+% \employer{The Santa Claus Problem}{October 2017 - July 2018}{}
+% Joint work with Thomas Rothvoss and Yihao Zhang. The resulting paper, \textbf{A Tale of Santa Claus, Hypergraphs and Matroids} is in submission.
+
+% \bigskip	
+% % \begin{achievements}
+% % 	\item Constructing an approximation algorithm for the Santa Claus problem, a 
+% % 	variant of the classic NP-complete jobs/machines scheduling problem
+% % 	\item Primarily using techniques from matroid optimization and graph theory
+% % \end{achievements}	
+
+
+% \employer{Planted Clique}{October 2015 - June 2016} {Lev Reyzin: UIC}
+% \smallskip
+% 	\begin{achievements}
+% 		\item Studied variants of the planted clique problem and other graph distinguishing
+% 		 problems using statistical algorithms
+% 	\end{achievements}
+% \bigskip
+
+
+% \employer{Knight's Tours on Aztec Diamonds }{February 2015 - May 2015} {Carl Yerger: CMU and Davidson College}
+% \smallskip
+% 	\begin{achievements}
+% 		\item Implemented algorithms that find knight's tours on small Aztec diamonds
+% 		\item Proved traditional inductive arguments for knight's tours fail for Aztec diamonds
+% 	\end{achievements}
+
+% \clearpage
+
+% \employer{Examining Euler Equations }{June 2014 - August 2014} {Johnny Guzman: Brown University}
+% \smallskip
+
+% 	\begin{achievements}
+% 	\item Research was performed under the Leadership Alliance Summer Research Program at Brown University, which aims to prepare underrepresented groups for graduate school
+% 	\item Numerically and analytically examined the behavior of solutions of the one dimensional generalized 
+% 	model vorticity equation 
+% 	%in search of determining whether solutions to the three dimension Euler Equations exist globally
+% 	\end{achievements}
+% \bigskip
+
+
+% 	\begin{achievements}
+% 	\item Research was performed during the 2013 Summer Undergraduate Applied Mathematics Institute at CMU
+% 	\item Discovered properties in binomial coefficients produced using the factorial defined by 
+% 	Manjul Bhargava over geometric progressions
+% 	%\item Studied signal processing and mathematical software with a group of 14 other 
+% 	%mathematics students		
+% 	\end{achievements}
+
+% \bigskip
 
 \header{Awards and Fellowships}
 \bigskip
 
-\textbf{Craig McKibben and Sarah Merner Endowed Fellowship in Mathematics:  UW}\\
-September 2017\\
-\smallskip
-Awarded to two students who were exceptional in their preliminary exams 
-and first year courses\\
+\employer{McKibben and Merner Endowed Fellowship in Mathematics}{2017-2019}{University of Washington}
+% \smallskip
+% Awarded to two students who were exceptional in their preliminary exams 
+% and first year courses\\
 \bigskip
 
-\textbf{Department of Mathematics, Statistics, and Computer Science Fellowship: UIC}\\
-August 2015\\
-\smallskip
-Awarded to outstanding incoming first year students in the department of MSCS at UIC\\
-\bigskip
-
-
-\textbf{Senior Leadership Recognition Award: CMU }\\
-
-May 2015\\
-\smallskip
-
-One of 40 students honored for making significant contributions to CMU's community 
-\bigskip
-
-\textbf{Leadership Alliance Scholar}\\
-July 2014\\
-\smallskip
-The Leadership Alliance selects talented undergraduates from underrepresented groups with the aim to
-provide them mentorship and resources to becoming leaders in academia and industry. 
+\employer{Department of Mathematics, Statistics, and Computer Science Fellowship}{2015}{University of Illinois at Chicago}
+% \smallskip
+% Awarded to outstanding incoming first year students in the department of MSCS at UIC\\
 \bigskip
 
 
-\clearpage
+\employer{Senior Leadership Recognition Award}{2015}{Carnegie Mellon University}
+
+% \smallskip
+
+% One of 40 students honored for making significant contributions to CMU's community 
+ \bigskip
+
+ \employer{College and University Honors}{2015}{Carnegie Mellon University}
+
+\bigskip
+
+ \employer{Leadership Alliance Scholar}{2014}{}
+% \smallskip
+% The Leadership Alliance selects talented undergraduates from underrepresented groups with the aim to
+% provide them mentorship and resources to becoming leaders in academia and industry. 
+ \bigskip
+
+
 \header{Teaching}
-
+I served as a teaching assistant for the following courses.
 \begin{center}
 	\begin{tabular}{ l l l }
-	  \textbf{Math 111}*& Algebra with Applications & UW Fall 2017 \\ 
-	  \textbf{Math 124}*&	 Calculus I & UW Winter  \& Spring 2017  \\  
-	 \textbf{Math 126}** &    Multivariable Calculus   & UW Fall 2016    \\
-	\textbf{Math 121}*	& Pre-Calculus	& UIC Fall 2015 \& Spring 2016\\	
-	\textbf{21-241}**	&	Matrices and Linear Transformations & CMU Spring 2015 	
+	  \textbf{Math 111}& Algebra with Applications & UW Fall 2017 \\ 
+	  \textbf{Math 124}&	 Calculus I & UW Winter  \& Spring 2017  \\  
+	 \textbf{Math 126} &    Multivariable Calculus   & UW Fall 2016    \\
+	\textbf{Math 121}	& Pre-Calculus	& UIC Fall 2015 \& Spring 2016\\	
+	\textbf{21-241}	&	Matrices and Linear Transformations & CMU Spring 2015 	
 	\end{tabular}
 \end{center}
 %\item{{\textbf {with high probability}}\\
 %Manage my math blog with high probability, https://samidavies.wordpress.com. Some posts are about topics in advanced mathematics, but most are aimed towards a general audience and motivated by real world examples! (My first year at UW really hindered my writing, but after September 13th 2017, 4pm EST, it should pick back up again.) }
 %\\
-\smallskip
-{\scriptsize * : Taught 2 active learning styled sections twice each week,
- held weekly office hours, graded exams and weekly quizzes. \\
-** : Taught 2 lecture styled sections twice each week, held weekly office hours, graded exams and weekly quizzes.} \\
+% \smallskip
+% {\scriptsize * : Taught 2 active learning styled sections twice each week,
+%  held weekly office hours, graded exams and weekly quizzes. \\
+% ** : Taught 2 lecture styled sections twice each week, held weekly office hours, graded exams and weekly quizzes.} \\
 
 
 \bigskip
@@ -245,21 +266,33 @@ provide them mentorship and resources to becoming leaders in academia and indust
 
 
 
-\header{Volunteer and Leadership Experience}
+\header{Math related outreach}
 \bigskip
-\textbf{Freedom Education Project Puget Sound }\\ 
- September 2017 - present\\
-\smallskip
-Tutoring math weekly to students at the Washington Corrections Center for Women\\
+\employer{Freedom Education Project Puget Sound}{2017-present}{~}
+\vspace{-5mm}
+Tutored fall of 2017. Course instructor summer of 2018.
 \bigskip
-\textbf{Community Advisor for Morewood Gardens}\\
- August 2014 - May 2015\\
-\smallskip
-%Assisted in the selection, hiring, and training of a staff of 11 Resident Assistants\\
-Lead the house staff in the development of a shared house vision for 470 residents, 
-while serving as an active point of interface between the house community and the greater CMU community
+
+\employer{Math Circle}{2018-present}{~}
+\vspace{-5mm}
+Instructor spring of 2018.
+
 
 \bigskip
+\employer{Assocation for Women in Math}{2016-present}{~}
+\vspace{-5mm}
+Member since 2016. Currently secretary of the UW student chapter.
+
+
+
+
+
+
+%Assisted in the selection, hiring, and training of a staff of 11 Resident Assistants\\
+% Lead the house staff in the development of a shared house vision for 470 residents, 
+% while serving as an active point of interface between the house community and the greater CMU community
+
+% \bigskip
 %\item Resident Assistant for Morewood E-Tower, Donner House- \hspace{37mm} 08/2012-05/2013
 %\vspace{2mm}
 
@@ -269,52 +302,52 @@ while serving as an active point of interface between the house community and th
 %\bigskip
 
 
-\header{Programming Languages}
+% \header{Programming Languages}
 
-\bigskip
-Intermediate in in \LaTeX, Python, Julia\\
-Novice in Matlab, Maple, Ruby, Java
-\bigskip
-
-
-\header{Selected Topics Coursework}
-
-\bigskip
-\textbf{Carnegie Mellon University}:\\
-\smallskip
-
-%Discrete Mathematics (2 semesters) $\qquad$ 
-%Real Analysis (2 semesters) $\qquad$
-\begin{center}
-	\begin{tabular}{ l l l }
-		 Operations Research & Linear Algebra (2 semesters) & Mathematical Finance (2 semesters)  \\ 
-		 Graph Theory &	Probability (2 semesters) & Adv. Macroeconomic Theory    \\
-		 Market Design & Numerical Methods & Adv. Microeconmic Theory
-	\end{tabular}
-\end{center}
+% \bigskip
+% Intermediate in in \LaTeX, Python, Julia\\
+% Novice in Matlab, Maple, Ruby, Java
+% \bigskip
 
 
-\bigskip
+% \header{Selected Topics Coursework}
 
-\textbf{University of Illinois at Chicago}:\\
-\smallskip
-\begin{center}
-	\begin{tabular}{ l l l }
-		Probabilistic Method &  Foundations in Data Science & Adv. Computer Algorithms   \\ 
-		Discrete Geometry &	 Measure Theory  &     \\
-	\end{tabular}
-\end{center}
-\bigskip
+% \bigskip
+% \textbf{Carnegie Mellon University}:\\
+% \smallskip
+
+% %Discrete Mathematics (2 semesters) $\qquad$ 
+% %Real Analysis (2 semesters) $\qquad$
+% \begin{center}
+% 	\begin{tabular}{ l l l }
+% 		 Operations Research & Linear Algebra (2 semesters) & Mathematical Finance (2 semesters)  \\ 
+% 		 Graph Theory &	Probability (2 semesters) & Adv. Macroeconomic Theory    \\
+% 		 Market Design & Numerical Methods & Adv. Microeconmic Theory
+% 	\end{tabular}
+% \end{center}
+
+
+% \bigskip
+
+% \textbf{University of Illinois at Chicago}:\\
+% \smallskip
+% \begin{center}
+% 	\begin{tabular}{ l l l }
+% 		Probabilistic Method &  Foundations in Data Science & Adv. Computer Algorithms   \\ 
+% 		Discrete Geometry &	 Measure Theory  &     \\
+% 	\end{tabular}
+% \end{center}
+% \bigskip
  
- \textbf{University of Washington}:\\
- \smallskip
- \begin{center}
-	 \begin{tabular}{ l l l }
-		Counting \& Sampling &  Adv. Linear Algebra (2 quarters)   & Optimization  
-	 \end{tabular}
- \end{center}\\
- \smallskip
- \scriptsize{Preliminary exams passed at UW in Complex Analysis and Algebra in September 2017}
+%  \textbf{University of Washington}:\\
+%  \smallskip
+%  \begin{center}
+% 	 \begin{tabular}{ l l l }
+% 		Counting \& Sampling &  Adv. Linear Algebra (2 quarters)   & Optimization  
+% 	 \end{tabular}
+%  \end{center}\\
+%  \smallskip
+%  \scriptsize{Preliminary exams passed at UW in Complex Analysis and Algebra in September 2017}
 
 
 
