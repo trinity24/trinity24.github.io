@@ -19,13 +19,12 @@ layout: default
     </address>
 </div>
 
-I'm a Ph.D. student at the University of Washington, where I work between the optimization group in the<a href="https://math.washington.edu">
+I'm a Ph.D. student at the University of Washington, where I work between the<a href="https://math.washington.edu">
 Department of Mathematics
 </a> and
 the
 <a href="http://theory.cs.washington.edu"> theory group</a>
- in the
-Paul G. Allen School of CSE. I'm fortunate to be advised by
+ in the Allen School. I'm fortunate to be advised by
 <a href = "https://sites.math.washington.edu/~rothvoss/index.html"> Thomas Rothvoss</a>.
 
 <br>
@@ -61,7 +60,7 @@ the University of Illinois at Chicago</a>.
     {% endif %} {% endfor %}
 <section>
 
-<h3 style="color:Indigo;">Recent Papers</h3>
+<h3 style="color:Indigo;">Papers</h3>
 <section id="papers">
         {% assign bibs-newest-first = site.bib | reverse %} 
         {% for paper in bibs-newest-first %}
@@ -71,7 +70,7 @@ the University of Illinois at Chicago</a>.
 </section>
 
 
-<h3 style="color:Indigo;">Personal, but Work Related</h3>
+<h3 style="color:Indigo;">Personal, but work welated</h3>
 <section id="personal">
     {% for post in site.posts %} {% if post.personal == true %}
     <div class="news-item">
