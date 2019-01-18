@@ -2,7 +2,7 @@
 layout: post
 title:  Nim- A Surprisingly Important Game (2)
 date:   2016-03-09
-categories: post
+categories: posts 
 ---
 
 ### Combinatorial games
