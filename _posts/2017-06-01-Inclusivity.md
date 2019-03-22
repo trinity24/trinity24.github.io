@@ -6,8 +6,8 @@ categories: post
 personal: true
 ---
 
-* Next year, I'll serve as the secretary for UW's chapter of [AWM](https://sites.math.washington.edu/~awmsc/). We host events to help create a supportive and inclusive environment for women and underrepresented minorities in mathematics (WUMiM).
+* I am the secretary for UW's chapter of [AWM](https://sites.math.washington.edu/~awmsc/). We host events to help create a supportive and inclusive environment for women and underrepresented minorities in mathematics (WUMiM).
 
 * I teach incarcerated women math through [FEPPS](http://fepps.org). 
 
-* I started volunteering at UW's [Math Circles](https://sites.math.washington.edu/~mathcircle/circle/) during the Spring of 2018.
+* I  volunteered at UW's [Math Circles](https://sites.math.washington.edu/~mathcircle/circle/) during the Spring of 2018.

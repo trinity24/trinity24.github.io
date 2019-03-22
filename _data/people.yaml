@@ -6,9 +6,19 @@ Xue:
 
 Yerger:
   name: "Carl Yerger"
+  webpage: "https://sites.google.com/view/carlyerger"
 
 Thomas:
   name: "Thomas Rothvoss"
+  webpage: "https://sites.math.washington.edu/~rothvoss/"
 
 Yihao:
   name: "Yihao Zhang"
+
+Cyrus:
+  name: "Cyrus Rashtchian"
+  webpage: "https://sites.google.com/site/cyrusrashtchian/home?authuser=0"
+
+Miki:
+  name: "Miklos Z. Racz"
+  webpage: "https://mracz.princeton.edu"
