@@ -1,0 +1,7 @@
+I"L<p>Finding perfect matchings in bipartite hypergraphs is, in general, NP-hard.
+However, when the edges of a hypergraph satisfy certain expansion conditions, 
+it becomes possible to study the problem algorithmically.
+I’m interested in studying these sufficient conditions, 
+specifically as they relate to allocation problems.</p>
+
+:ET

@@ -39,8 +39,8 @@
 {% endif %}
 
 <dd>
-    {% for link in paper.links %} [
-    <a href="{{ link.url }}">{{ link.text }}</a>] 
+    {% for link in paper.links %}
+    [<a href="{{ link.url }}">{{- link.text -}}</a>] 
     {% endfor %} 
     {% unless paper.content == "" %}
         [<a href="{{ paper.url }}">bibtex</a>]
