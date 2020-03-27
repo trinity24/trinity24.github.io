@@ -1,0 +1,130 @@
+I"�)<h3 id="major-disclaimer">Major disclaimer</h3>
+<p>This is a post about some of the history behind the solvability of a few common games.</p>
+
+<p><img src="/assets/major_buzzkill.gif" alt="major_buzzkill" /></p>
+
+<p>It should be very understandable for people without a math background, as there isn’t any real math in here.</p>
+
+<hr />
+
+<h3 id="an-introduction">An introduction</h3>
+
+<p>Games are the perfect mix of <em>chaos</em> and <em>strategy</em>: games are dynamic, since players’ decisions affect them, but there often exists an optimal way to play. So, let’s study a few simple games most people have played and examine:</p>
+
+<ul>
+  <li>
+    <p>why we can solve some games but not others</p>
+  </li>
+  <li>
+    <p>how we solve these games</p>
+  </li>
+  <li>
+    <p>some different processes which were developed along the way</p>
+  </li>
+</ul>
+
+<p>I’ll focus on tic-tac-toe and set take-away, but also briefly discuss Connect 4, checkers, and chess.</p>
+
+<h3 id="types-of-games">Types of games</h3>
+
+<p>Let’s begin by explaining different classifications for games and developing
+basic definitions that become relevant when examining games. In game
+theory, a player demonstrates <strong>perfect play</strong> when they play the game in such a way that their strategy leads to the optimal result, no matter what strategy the opponent is using. Games are classified into either being solved, partially solved, or unsolved. The names are pretty self-explanatory:</p>
+
+<ul>
+  <li>
+    <p>A <strong>solved game</strong> has an outcome (win, lose, or draw) that can be determined from any position, given perfect play by both players. Perfect play is required because it controls the game so that only optimal moves are made.</p>
+  </li>
+  <li>
+    <p>A <strong>partially solved game</strong> has an outcome that can be determined from some starting positions, but not from others.</p>
+  </li>
+  <li>
+    <p>In an <strong>unsolved game</strong>, the game’s result cannot be determined from any starting position.</p>
+  </li>
+</ul>
+
+<p>Solved games have three subsets: ultra-weakly solved, weakly solved, and strongly solved. In an ultra-weakly solved game, it can be determined whether the first player will win, lose, or draw from their initial position. For a weakly solved game, there exists an algorithm for at least one starting position of the game, where a win or draw is guaranteed for a player. Lastly, a strongly solved game has an algorithm such that a player can play an optimal solution (I didn’t say “win” because the optimal solution could be a draw from certain positions) from any starting position.</p>
+
+<p>Wow weren’t all those definitions super fun!? Sorry about that, but don’t worry because next come examples, which will help everyone be able to differentiate all these different types of games.</p>
+
+<h3 id="tic-tac-toe">Tic-tac-toe</h3>
+
+<p>One example of a strongly solved game is tic-tac-toe. Perfect play from both players leads to a draw, which is known as a <strong>cat’s game</strong>.</p>
+
+<p><img src="/assets/cat_game2.png" alt="cat's game" /></p>
+
+<p>Since tic-tac-toe is played on a symmetric grid, it’s easy to overcount
+the set of board outcomes. For example, figure 1 is a reflection of
+figure 2 and figure 3 is a rotation of figure 2, so we wish to consider all three
+of those boards the same.  After considering and discounting board symmetries and
+assuming <script type="math/tex">X</script> plays first, there are exactly 91 winning board positions for <script type="math/tex">X</script>, 44
+winning board positions for <script type="math/tex">O</script>, and 3 board positions that are considered a draw. The total possible positions in tic-tac-toe is 765. This number is interesting to keep in mind because it’s significantly smaller than the total possible positions in other games we’ll look at later.</p>
+
+<p><img src="/assets/rotations.png" alt="rotations" /></p>
+
+<p>Tic-tac-toe has 8 simple rules, ordered in the importance that they should be followed.
+When a player uses the first applicable rule in the list for every turn, perfect play
+exists.</p>
+
+<ol>
+  <li>
+    <p>If  you have two of your own mark in a row, place a third mark in the row to win.</p>
+  </li>
+  <li>
+    <p>If an opponent has two in a row, place a third in line to block the opponent’s win. </p>
+  </li>
+  <li>
+    <p>Create two unblocked lines of two in a row. This is called a fork.</p>
+  </li>
+  <li>
+    <p>Block an opponent’s fork by either forcing the opponent to defend by placing two in a row, or blocking the fork ahead of time.</p>
+  </li>
+  <li>
+    <p>Play the center.</p>
+  </li>
+  <li>
+    <p>If opponent is marked in a corner, play the opposite corner (the corner on the same diagonal). </p>
+  </li>
+  <li>
+    <p>Play a corner.</p>
+  </li>
+  <li>
+    <p>Play the middle of any of the four sides.</p>
+  </li>
+</ol>
+
+<h3 id="connect-4">Connect 4</h3>
+
+<p>What’s interesting about the strategy behind tic-tac-toe is how it relates to more
+complex strongly solved games, like Connect 4. There are approximately <script type="math/tex">10^{13}</script> possible positions in Connect 4, which is significantly larger than the 765 possible positions in tic-tac-toe. Connect 4 was first solved mathematically in 1988 by James Allen.</p>
+
+<p>Also in 1988, Victor Allis proved that if both players behave optimally in a game of Connect 4, the first player can always win if she starts in the middle column, and can at least draw if she starts in a column other than the middle column. I decided to look at Victor Allis’s method of solving Connect 4 because it’s similar to how tic-tac-toe is solved. Victor Allis developed 9 strategic rules to optimally play Connect 4. These rules can only be applied by the player who guides the game so that she controls which squares each player will mark (this is called <strong>controlling the zugzwang</strong>). Based on the description of the board, one of the rules is applied by a simple search of the board for which rule is applicable where. The rules focus on how to gain control of certain areas of the board.</p>
+
+<p><img src="/assets/connect-4.jpg" alt="connect-4" /></p>
+
+<p>Both the strategies given by Allis for Connect 4 and given above for tic-tac-toe are called <strong>knowledge-based approaches</strong>. In knowledge-based approaches there are a set of rules and facts that can be applied in order to play optimally. These rules are applied by searching the game board after each round and deciding which strategies are applicable. This technique works for many strongly solved games which have a relatively small number of possible board outcomes.</p>
+
+<h3 id="chess-and-checkers">Chess and checkers</h3>
+
+<p>The solvability of chess and checkers are  semi-interesting computationally and pretty boring mathematically. However, it’s helpful to consider them in order to understand why they are so difficult to solve. Both of these games have an immensely larger number of unique ways to be played as compared to Connect 4 or tic-tac-toe.</p>
+
+<p>Currently, checkers is weakly solved and chess is partially solved. Checkers is categorized as weakly solved because from the standard starting position, when both players utilize perfect play, they will achieve a draw. Checkers was solved by Jonathon Schaeffer in 2007, almost 20 years after Allis solved Connect 4. To date, checkers is the solved game with the largest number of possible solutions to win, approximately <script type="math/tex">5 \times 10^{20}</script> unique ways. It’s the most complicated game solved, with a total of <script type="math/tex">10^{14}</script> total computations performed over the span of 18 years (I think. There’s very likely something new I don’t know about. This was true in fall 2012.).</p>
+
+<p><img src="/assets/chess.gif" alt="connect-4" /></p>
+
+<p>It’s widely accepted that chess is not even possible to solve until a breakthrough in computing occurs, as there are an estimated <script type="math/tex">10^{45}</script> unique ways to win chess. Chess is partially solved because its endgame can be solved with perfect play once there are less than 6 pieces left on the board.</p>
+
+<h3 id="subset-take-away">Subset take-away</h3>
+
+<p>Saving the most theoretically interesting bit for last, let’s end with a short discussion on an unsolved game. Remember that in an unsolved game, the outcome cannot be determined from any starting position. <strong>Subset take-away</strong> is a game in which two players alternate choosing proper subsets (this means you can’t take the whole set) of a particular finite set. Once a subset has been chosen, none of its supersets (sets which contain it) can be chosen by either player and no player can choose the empty set. The player who is left with no subset to choose loses. It’s been shown by <a href="http://arxiv.org/pdf/math/0207185.pdf">Christensen and Tilford</a> that when the game is played on a set with 6 or less elements, player 2 has a winning strategy. Furthermore,  the creator of the game, <a href="https://en.wikipedia.org/wiki/David_Gale">David Gale</a>, conjectured that player 2 always has a winning strategy in subset take-away.  Still, the game remains unsolvable for any set larger than 6.</p>
+
+<p>Subset take-away becomes equivalent to a technique known as simplex erasure. For the purpose of explaining this game, a simplex is the smallest convex shape that can be made from a set of vectors. So the simplex for 3 vectors is a triangle. In simplex erasure, one of the components of the simplex is erased, which represents a subset being chosen. In 1997, J. Daniel Christensen and Mark Tilford used this method to simplify the analysis of subset take-away for sets of cardinalities 5 and 6. Subset take-away is easily solvable by brute force for sets of size 4 or less.</p>
+
+<h3 id="an-easy-take-away">An easy “take-away”</h3>
+
+<p>As the growth in technology continues, our capabilities to examine the large
+number of outcomes for different games grows, and this allows us to consider the
+solvability of complex games like checkers and chess. However, even with this growth, the computational power is not enough to solve some games, such as subset take-away. Different ideas are still being formulated to solve these games, but at the end of the day, more theory and strategy is needed when computation is not enough. (Or at least that’s what the mathematician in me says. A computer scientist might tell you I’m wrong.)</p>
+
+<p>If you enjoy learning about games, let’s turn this subject more mathematical and talk about nim. Check out the post on it.</p>
+:ET
