@@ -18,3 +18,4 @@ collections:
 
 # Build settings
 markdown: kramdown
+exclude: [vendor]
