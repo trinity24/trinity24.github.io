@@ -1,0 +1,3 @@
+I"µ<p>So far, my work in scheduling has been in designing approximation algorithms for 
+scheduling with precedence and communication delay constraints. Very little was known about this setting before our work and some <a href="https://arxiv.org/pdf/2004.10776.pdf">concurrent work</a>. We make progress toward one of the top-10 open problem in scheduling theory: do there exist constant factor approximation algorithms in this setting?</p>
+:ET
