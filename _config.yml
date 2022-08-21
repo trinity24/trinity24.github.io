@@ -19,3 +19,5 @@ collections:
 # Build settings
 markdown: kramdown
 exclude: [vendor]
+
+theme: jekyll-theme-midnight
