@@ -1,54 +1,54 @@
-daviess:
-  name: "Sami Davies"
+sduppala:
+  name: "Sharmila Duppala"
 
-Xue:
-  name: "Chenxiao Xue"
+aravind:
+  name: "Aravind Srinivasan"
+  webpage: "https://www.cs.umd.edu/~srin/"
+seyed:
+  name: "Seyed Esmaeili"
+  webpage: "https://sa-esmaeili.github.io/" 
 
-Yerger:
-  name: "Carl Yerger"
-  webpage: "https://sites.google.com/view/carlyerger"
+john:
+  name: "John Dickerson"
+  webpage: "http://jpdickerson.com/" 
 
-Thomas:
-  name: "Thomas Rothvoss"
-  webpage: "https://sites.math.washington.edu/~rothvoss/"
+rezaul:
+  name: "Rezaul Chowdhury"
+  webpage: "https://www3.cs.stonybrook.edu/~rezaul/"
 
-Yihao:
-  name: "Yihao Zhang"
+brian:
+  name: "Brian Brubach"
+  webpage: "https://bbrubach.github.io/"
+juan:
+  name: "Juan Luque"
 
-Cyrus:
-  name: "Cyrus Rashtchian"
-  webpage: "https://sites.google.com/site/cyrusrashtchian/home?authuser=0"
+vedant:
+  name: "Vedant Nanda"
+  webpage: "https://nvedant07.github.io/"
 
-Miki:
-  name: "Miklos Z. Racz"
-  webpage: "https://mracz.princeton.edu"
+pan: 
+  name: "Pan Xu"
+  webpage: "https://sites.google.com/site/panxupi" 
 
-Janardhan:
-  name: "Janardhan Kulkarni"
-  webpage: "https://www.microsoft.com/en-us/research/people/jakul/"
+karthik: 
+  name: "Karthik Abinav Sankararaman"
+  webpage: "http://karthikabinavs.xyz/"
 
-Jakub: 
-  name: "Jakub Tarnawski"
-  webpage: "http://jakub.tarnawski.org"
+joe: 
+  name: "Joseph Mitchell"
+  webpage: "http://www.ams.sunysb.edu/~jsbm/jsbm.html" 
 
-Ben: 
-  name: "Benjamin G. Schiffer"
+skiena: 
+  name: "Steven Skiena"
+  webpage: "https://www3.cs.stonybrook.edu/~skiena/" 
 
-Sai: 
-  name: "Sai Sandeep"
-  webpage: "https://spallerl.github.io"
 
-Arya: 
-  name: "Arya Mazumdar"
-  webpage: "http://mazumdar.ucsd.edu"
+estie: 
+  name: "Ester Arkin"
 
-Soumyabrata: 
-  name: "Soumyabrata Pal"
-  webpage: "https://soumyabratap.github.io"
+shihyu: 
+  name: "Shih Yu"
 
-Samir: 
-  name: "Samir Khuller"
-  webpage: "https://www.samirkhuller.com"
-
-Shirley: 
-  name: "Shirley Zhang"
+rathish:
+  name: "Rathish Das"
+  webpage: "https://cs.uwaterloo.ca/~r27das/"
