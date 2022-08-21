@@ -21,6 +21,7 @@ brian:
   webpage: "https://bbrubach.github.io/"
 juan:
   name: "Juan Luque"
+  webpage: "https://www.linkedin.com/in/juan-luque-110391149"
 
 vedant:
   name: "Vedant Nanda"
@@ -42,12 +43,17 @@ skiena:
   name: "Steven Skiena"
   webpage: "https://www3.cs.stonybrook.edu/~skiena/" 
 
-
 estie: 
   name: "Ester Arkin"
+  webpage: "https://scholar.google.com/citations?user=SBfvewoAAAAJ&hl=en&oi=ao"
 
 shihyu: 
-  name: "Shih Yu"
+  name: "Shih-Yu Tsai"
+  webpage: "https://sites.google.com/g2.nctu.edu.tw/shih-yu-tsai"
+
+zafar:
+  name: "Zafar Ahmed"
+  webpage: "https://www3.cs.stonybrook.edu/~zafahmad/"
 
 rathish:
   name: "Rathish Das"
