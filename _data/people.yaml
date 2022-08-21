@@ -43,8 +43,12 @@ skiena:
   name: "Steven Skiena"
   webpage: "https://www3.cs.stonybrook.edu/~skiena/" 
 
+jayson:
+  name: "Jayson Lynch"
+  webpage: "https://scholar.google.com/citations?user=vGN58VQAAAAJ&hl=en"
+
 estie: 
-  name: "Ester Arkin"
+  name: "Esther Arkin"
   webpage: "https://scholar.google.com/citations?user=SBfvewoAAAAJ&hl=en&oi=ao"
 
 shihyu: 
