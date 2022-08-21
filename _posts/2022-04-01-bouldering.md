@@ -6,4 +6,4 @@ categories: post
 personal: true
 ---
 
-I completed my first Bouldering Competition in the spring of 2022 in the Beginner divison.
+I competed in my first bouldering competition in Spring 2022 at Purdue Boulder Up! in Women's Beginner division (V0-V3).
