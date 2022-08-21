@@ -1,464 +1,309 @@
-\documentclass[12 pt]{article}
-\usepackage{fullpage}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{multicol}
-\textheight=10in
+
+\documentclass[letterpaper,11pt,oneside]{article}
+% \documentclass[a4paper,11pt,oneside]{article}
+\usepackage{ifthen}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage[left=.4in,right=.4in,top=0.7in,bottom=0.5in,nohead,nofoot]{geometry}
+\usepackage{marvosym}
+\usepackage{times}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0cm}
+
+\usepackage[bookmarks,
+pdftitle={Resume},
+pdfauthor={Sharmila Duppala},
+pdfsubject={},
+pdfcreator={},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+pdfstartview=FitH,
+colorlinks=true,
+linkcolor=black,   %Color for normal internal links.
+anchorcolor=black, %Color for anchor text.
+citecolor=green,   %Color for bibliographical citations in text.
+filecolor=magenta, %Color for URLs which open local files.
+menucolor=red,     %Color for Acrobat menu items.
+urlcolor=black]{hyperref}
+
+\newcommand{\longmonth}[1]{%
+    \ifthenelse{\equal{#1}{1}}{January}{}%
+\ifthenelse{\equal{#1}{2}}{February}{}%
+\ifthenelse{\equal{#1}{3}}{March}{}%
+\ifthenelse{\equal{#1}{4}}{April}{}%
+\ifthenelse{\equal{#1}{5}}{May}{}%
+\ifthenelse{\equal{#1}{6}}{June}{}%
+\ifthenelse{\equal{#1}{7}}{July}{}%
+\ifthenelse{\equal{#1}{8}}{August}{}%
+\ifthenelse{\equal{#1}{9}}{September}{}%
+\ifthenelse{\equal{#1}{01}}{January}{}%
+\ifthenelse{\equal{#1}{02}}{February}{}%
+\ifthenelse{\equal{#1}{03}}{March}{}%
+\ifthenelse{\equal{#1}{04}}{April}{}%
+\ifthenelse{\equal{#1}{05}}{May}{}%
+\ifthenelse{\equal{#1}{06}}{June}{}%
+\ifthenelse{\equal{#1}{07}}{July}{}%
+\ifthenelse{\equal{#1}{08}}{August}{}%
+\ifthenelse{\equal{#1}{09}}{September}{}%
+\ifthenelse{\equal{#1}{10}}{October}{}%
+\ifthenelse{\equal{#1}{11}}{November}{}%
+\ifthenelse{\equal{#1}{12}}{December}{}}
+
+\newcommand{\shortmonth}[1]{%
+    \ifthenelse{\equal{#1}{1}}{Jan}{}%
+\ifthenelse{\equal{#1}{2}}{Feb}{}%
+\ifthenelse{\equal{#1}{3}}{Mar}{}%
+\ifthenelse{\equal{#1}{4}}{Apr}{}%
+\ifthenelse{\equal{#1}{5}}{May}{}%
+\ifthenelse{\equal{#1}{6}}{Jun}{}%
+\ifthenelse{\equal{#1}{7}}{Jul}{}%
+\ifthenelse{\equal{#1}{8}}{Aug}{}%
+\ifthenelse{\equal{#1}{9}}{Sep}{}%
+\ifthenelse{\equal{#1}{01}}{Jan}{}%
+\ifthenelse{\equal{#1}{02}}{Feb}{}%
+\ifthenelse{\equal{#1}{03}}{Mar}{}%
+\ifthenelse{\equal{#1}{04}}{Apr}{}%
+\ifthenelse{\equal{#1}{05}}{May}{}%
+\ifthenelse{\equal{#1}{06}}{Jun}{}%
+\ifthenelse{\equal{#1}{07}}{Jul}{}%
+\ifthenelse{\equal{#1}{08}}{Aug}{}%
+\ifthenelse{\equal{#1}{09}}{Sep}{}%
+\ifthenelse{\equal{#1}{10}}{Oct}{}%
+\ifthenelse{\equal{#1}{11}}{Nov}{}%
+\ifthenelse{\equal{#1}{12}}{Dec}{}}
+
+% Style settings
 \pagestyle{empty}
-%\raggedbottom
-\raggedright
+\setlength{\parindent}{0in}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} % change footnote symbols
 
-%  \renewcommand{\encodingdefault}{cg}
-  %\renewcommand{\rmdefault}{lgrcmr}
+% Macros
+\newenvironment{myresume}[2]{\pdfbookmark{#1}{#1}{\LARGE{#1}}\vspace{1mm}\hrule\vspace{-3mm}\begin{longtable}{p{0.12\textwidth} p{0.83\textwidth}}~&#2}{\end{longtable}}
+    \renewcommand{\section}[2]{\vspace{-1.3em}\\\pdfbookmark{#1}{#2}{\singlespace\textsc{#1}}&}
+\newcommand{\firstentry}[1]{\newline#1}
+\newcommand{\entry}[1]{\vspace{-0.8em}\\~&#1}
+\newcommand{\hide}[1]{}
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
-% DEFINITIONS FOR RESUME
-\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
-\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
-\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \selectfont{\textsc{#1}}} \vspace*{-6pt} \lineunder}
-\newcommand{\employer}[3]{{ \textbf{#1} \hfill #2 \\ #3\\  }}
-\newcommand{\employerss}[3]{{ \textbf{#1} \hfill (#2)\\ \textbf{#3}\\  }}
-\newcommand{\employerzz}[2]{{ \textbf{#1} \hfill(#2)\\  }}
-\newcommand{\contact}[3]{
-\vspace*{-8pt}
-\begin{center}
-{\LARGE \scshape {#1}}\\
-#2 \lineunder 
-#3
-\end{center}
-\vspace*{-8pt}
-}
-\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
-\newcommand{\schoolwithcourses}[4]{
- \textbf{#1} #2 #3\\ 
-#4 \\
+% Datestamp format: \datestamp{YEAR}{MONTH}{DAY}
+%\newcommand{\datestamp}[3]{\longmonth{#2} #3, #1}
+%\newcommand{\datestamp}[3]{\shortmonth{#2} #3, #1}
+\newcommand{\datestamp}[3]{\shortmonth{#2} #1}
 
-\vspace*{5pt}
-}
-\newcommand{\school}[4]{
- \textbf{#1} #2 $\bullet$ #3\\ 
-#4 \\
-}
-% END RESUME DEFINITIONS
+%%%%%%%%%%%%%%%%
+%% NAME BLOCK %%
+%%%%%%%%%%%%%%%%
+
 \begin{document}
+\begin{myresume}{Sharmila Duppala}
+    {\small
+    email: \href{mailto:sduppala@umd.edu}{\textit{sduppala@umd.edu}}\hfill \href{https://www.cs.umd.edu/~sduppala}{website:sharmila-duppala.com} \hfill Github: \href{https://github.com/trinity24}{@trinity24} \hfill Phone: +1 (516)-669-6750 }
 
-\small
-\smallskip
-\vspace*{-55pt}
-% Title bar
-\begin{flushright}
-sami@northwestern.edu \\
-Department of Computer Science\\
-Northwestern University
-\end{flushright}
-
-\begin{center}
-	\vspace{-60pt}
-{\fontsize{70}{30}\textbf{Sami Davies} }\\
-samidavies.com
-\end{center}
-%  {\hfill
-%  \begin{tabular}{c c}
-%    906 El Cajon Way &  craffel@ccrma.stanford.edu\\
-%    Palo Alto, CA 94303 & 507-398-2646 \\ 
-%  \end{tabular}
- %   \begin{tabular}{c c}
-   %     sedavies@andrew.cmu.edu & SMC 5046, CMU\\
-     %   (717)-507-9253 & Pittsburgh, PA 15289\\
-     %\end{tabular}
-
-
-%\vspace{2 mm}
-
-% {\fontsize{11}{5}{\header{\selectfont{Contact Information}}}
-% \vspace{1mm}
-% \begin{flushleft}
-% Email: daviess@uw.edu  
-% \end{flushleft}
-% Address: 1800 N 35th St \#5, Seattle WA, 98103 \\ 
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
 
-\header{Education}
+\section{Education}{education}
 
-\bigskip
-\employer{University of Washington}{2016 - 2021 }{~}
-%\schoolwithcourses{Carnegie Mellon University}
-\vspace{-4mm}
-M.S. in Mathematics, 2019\\
-Ph.D. in Mathematics, 2021
-% 3.86/4.0
-%In Major QPA: 3.77/4.0\\
- \bigskip
+\firstentry{
+    \href{http://www.umd.edu}{\textbf{University of Maryland}}, College Park, Maryland, USA \hfill \datestamp{2019}{08}{07}--Present\newline
+    Ph.D. in Theoretical Computer Science and Fairness in AI, \href{http://www.cs.umd.edu}{Department of Computer Science} \hfill 
+}
 
-\employer{University of Illinois at Chicago}{2015-2016}{~}
-%\schoolwithcourses{Carnegie Mellon University}
-\vspace{-4mm}
-M.S. in Mathematics 
-%  3.84/4.0
- \bigskip
+\entry{
+    \href{http://www.stonybrook.edu}{\textbf{Stony Brook University}}, New York, USA \hfill \datestamp{2017}{07}{20}--\datestamp{2019}{05}{15}\newline
+    M.S. (Thesis),  \href{http://cse.iitkgp.ac.in}{Department of Computer Science} \hfill
+}
 
-\employer{Carnegie Mellon University}{2011-2015}{~}
-%\schoolwithcourses{Carnegie Mellon University}
-\vspace{-4mm}
-B.S. in Mathematical Sciences, Minor in Economics\\
-College and University Honors 
-% 3.78/4.0\\
+\entry{
+    \href{http://www.svnit.ac.in}{\textbf{National Institute of Technology Surat}}, Gujarat, India \hfill \datestamp{2012}{07}{20}--\datestamp{2016}{05}{15}\newline
+    B.Tech. (Hons.),  \href{http://cse.iitkgp.ac.in}{Department of Computer Engineering} \hfill 
+}
 
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
 
-\bigskip
+\section{\href{https://scholar.google.com/citations?user=l7VcIesAAAAJ&hl=en}{Publications}}{papers}
+\firstentry{{\textbf{{Fair labelled Clustering}}}
 
-\header{My Research in Three Sentences}
-I design algorithms for a wide range of problems in combinatorial optimization.
-My PhD focused on classic questions in approximation algorithms. 
-For my post doctoral work, I am most interested in developing theoretical foundations for learning-augmented algorithms.
-\bigskip
+Seyed Esmeili, Sharmila Duppala, Brian Brubach, John P. Dickerson
+
+\textit{KDD 2022} }
+
+    \entry{
+        \href{https://dl.acm.org/doi/pdf/10.1145/3323165.3323209}{\textbf{Data Races and the Discrete Resource-time Tradeoff Problem with Resource Reuse over Paths}}
+        
+        Rathish Das, Shih-Yu Tsai, Sharmila Duppala, Jason Lynch, Ester Arkin, Rezaul Chowdhury, Joseph Mitchell and Steven Skiena
+        
+        \textit{SPAA 2019}
+    }
 
-\header{Publications}
-\begin{enumerate}	
-\item Sami Davies, Samir Khuller, Shirley Zhang. ``Balancing Flow Time and Energy Consumption,'' SPAA 2022.\\
-\item Sami Davies, Arya Mazumdar, Soumyabrata Pal, Cyrus Rashtchian. ``New Lower Bounds on the Total Variation Distance Between Mixtures of Two Gaussians,'' ALT 2022. \\
-\item Sami Davies, Janardhan Kulkarni, Thomas Rothvoss, Sai Sandeep, Jakub Tarnawski, Yihao Zhang. ``On the Hardness of Scheduling with Non-Uniform Communication Delays,'' SODA 2022.\\	
-\item Sami Davies, 	Mikl\'os Z.\ R\'acz, Benjamin Schiffer, Cyrus Rashtchian. ``Approximate Trace Reconstruction: Algorithms,'' ISIT 2021.\\
-\item Sami Davies, Janardhan Kulkarni, Thomas Rothvoss, Jakub Tarnawski, Yihao Zhang.  ``Scheduling with Communication Delays via LP Hierarchies and Clustering II: Weighted Completion Times on Related Machines," SODA 2021.\\
-\item Sami Davies, Janardhan Kulkarni, Thomas Rothvoss, Jakub Tarnawski, Yihao Zhang. ``Scheduling with Communication Delays via LP Hierarchies and Clustering,'' FOCS 2020. \\
-\item Sami Davies, Thomas Rothvoss, Yihao Zhang. ``A Tale of Santa Claus, Hypergraphs and Matroids,'' SODA 2020. 
-\item Sami Davies, 	Mikl\'os Z.\ R\'acz, Cyrus Rashtchian. ``Reconstructing Trees from Traces,'' COLT 2019. Full version to appear in the Annals of Applied Probability
-\item Sami Davies, Chenxiao Xue, Carl R. Yerger, ``Algorithms for finding knight's tours on Aztec diamonds,'' 
-\textit{Involve, a Journal of Mathematics}, Vol. 10 (2017), No. 5, 721-734.
-\end{enumerate}
+    \entry{
+        \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9359209}{\resizebox{\linewidth}{!}{\textbf{Improved MapReduce Load Balancing through Distribution-Dependent Hash Function Optimization}}}
+        
+        $^{abc}$ Zafar Ahmad, Sharmila Duppala, Rezaul Chowdhury, Steven Skiena
+        
+        \textit{ICPADS 2020}
+    }
 
-% \header{Presentations}
-% \begin{enumerate}
-% \item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. MAA Undergraduate Poster Session: 2015 Joint Mathematics Meeting. Joint presentation with Gopal Yalla.
-% \item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. 2014 Leadership Alliance National Symposium. Joint presentation with Gopal Yalla.
-% \item \textit{Searching for Combinatorial Interpretations Using the Bhargava Defined Factorial}. 2013 Summer Undergraduate Applied Mathematics Institute Symposium. Joint presentation with Joe Gault.
-% \end{enumerate}
 
-\clearpage
-
-\header{Invited participation and internships}
-
-\bigskip
-\employer{IDEAL Workshop on Algorithms for Massive Data Sets}{May 2022}{Evanston, IL (Hybrid)}
-Virtual talk on learning-augmented algorithms
-
-\bigskip
-\employer{CanaDAM (Canadian Discrete and Algorithmic Mathematics)}{May 2021}{Virtual talk on scheduling with communication delays}
+    \entry{
+       {\textbf{Online minimum matching with uniform metric and random arrivals }}
+        
+       $^{abc}$ Sharmila Duppala, Karthik Sankararaman, Pan Xu
+        
+        \textit{Operations Research Letters 2022}
+    }
+    
 
+\entry{{\textbf{Rawlsian Fairness in Online Bipartite Matching:Two-sided, Group, and Individual}}
 
-\bigskip
-\employer{Microsoft Research Intern}{Summer 2020}{Redmond, WA (virtual)}
-Hosted by Janardhan Kulkarni and Jakub Tarnawski in the Algorithms group
+{Seyed Esmeili, Sharmila Duppala, Vedant Nanda, John P. Dickerson, Aravind Srinivasan}
 
-	
+\textit{AAMAS 2022 (Extended abstract)}}
 
-\bigskip
-\employer{Dagstuhl Seminar in Scheduling}{February 2020}{Shloss Dagstuhl}
+\entry{{\textbf{{Group Fairness in Set Packing Problems}}}
 
+Sharmila Duppala, Juan Luque, John P. Dickerson, Aravind Srinivasan 
 
+\textit{Under Submission at NeurIPS 2022}}
 
-\bigskip
-\employer{Nebraska Conference for Women in Mathematics}{February 2019}{University of Nebraska Lincoln}
+\entry{{\textbf{{Algorithms for online matching under random order with degree-dependent competitive ratios }}}
 
+Sharmila Duppala, Pan Xu 
 
+\textit{Under Submission at NeurIPS 2022}}
 
-\bigskip
-\employer{Women in Theory}{June 2018}{Harvard University}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \clearpage
+\section{Research \newline Experience}{research}
+\firstentry{
+    \textbf{Ph.D. Student, \href{http://www.cs.umd.edu/}{University of Maryland, College Park}} \hfill \datestamp{2019}{08}{07}--Present \newline
+    {\textit{ Algorithmic Fairness and Stochastic Models for} \hfill Prof. John Dickerson \newline \textit{Combinatorial Optimization}} \hfill {Prof. Aravind Srinivasan}
+    
+    Worked on formulating notions of fairness, translating them into rigorous mathematical objects, and incorporating them in classical algorithmic problems. Specifically,  fairness in hypergraph matching, online matching, maximum coverage, clustering and kidney exchange markets and the interplay of fairness and stochasticity, with emphasis on how the latter can ensure socially fair algorithmic solutions.}
 
-\bigskip
-\employer{Leadership Alliance Summer Research Program}{Summer 2014} {Brown University}
-\textit{Examining Euler Equations}. Joint work with Johnny Guzman, Gopal Yalla 
+\entry{
+    \textbf{Masters Thesis , Stony Brook University} \hfill \datestamp{2017}{07}{15}--\datestamp{2019}{05}{15} \newline
+    {\textit{Optimizating two systems employing reducers}} \hfill {Prof. Rezaul Chowdhury} 
+    
+    Designed approximation algorithms for the \emph{Space-Time Trade-off Problem} in parallel programs that can simultaneously optimize the memory utilization and the makespan of  series-parallel graphs and computational  Directed Acyclic Graphs (DAGs). 
+}
 
-\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INTERNSHIPS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\employer{Summer Undergraduate Applied Mathematics Institute}{Summer 2013}{CMU}
-\textit{Patterns of the Bhargava Defined Factorial}. Joint work with Joe Gault and Gregory Johnson.
+%%%%%%%%%%%%%%%%%%
+%% KEY COURSES %%
+%%%%%%%%%%%%%%%%%%
 
+\section{Key \newline Courses}{courses}
+\firstentry{
+    \textbf{Graduate Level:} Quantum Computing, Advanced Probability Theory, Mechanism Design for Social AI, Algorithmic Lowerbounds, Advanced Algorithms, Computational Geometry, Discrete Mathematics, Computer Vision, Operating Systems, Network Security 
+}\\[-8pt]
 
+\entry{
+    \resizebox{\linewidth}{!}{\textbf{Data Science:} Deep Learning Theory, Advanced Numerical Optimization, Algorithms in Machine Learning}
+}
 
-%\vspace{2mm}
-% \header{Other past projects}
-% \bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% POSITIONS OF RESPONSIBILITY %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Positions of \newline Responsibility}{por}
+\firstentry{
+    \textbf{Graduate Teaching Assistant} \hfill \datestamp{2017}{07}{14}--Present \newline
+    Served as a Discussion Leader and responsible for teaching Object Oriented Programming, Analysis of Algorithms, Computer Systems and Discrete Structures during different semesters. 
+}
 
-% \employer{Mechanism Design: Healthcare \& the FedEx Problem }{June 2017 - October 2017} {Anna Karlin: UW}
-% \smallskip	
-% \begin{achievements}
-% 		\item Examined economists' work in adverse and advantageous selection settings to understand the
-% 		issues arising in healthcare allocation from the perspective of mechanism design 
-% 		\item Designed and proved results for a deterministic algorithm for the FedEx problem, which seeks to design a pricing system for package deliveries
-% 	\end{achievements}
-% \bigskip
+\entry{
+    \textbf{Organizer, CATS (Capital Area Theory Seminar)} \hfill \datestamp{2021}{08}{01}--\datestamp{2022}{05}{25} \newline
+    Responsible for organizing CS theory talks and inviting speakers.
+}
 
-% \employer{The Santa Claus Problem}{October 2017 - July 2018}{}
-% Joint work with Thomas Rothvoss and Yihao Zhang. The resulting paper, \textbf{A Tale of Santa Claus, Hypergraphs and Matroids} is in submission.
+\entry{
+  \textbf{Curriculum Designer and Instructor, Girls Talk Math} \hfill \datestamp{2021}{08}{01}--\datestamp{2021}{06}{01} \newline
+    Responsible for designing curriculum on undergraduate mathematics topics like Group Theory, Network Theory and Quantitative Finance for high school students and conducting educational camps.
+}
 
-% \bigskip	
-% % \begin{achievements}
-% % 	\item Constructing an approximation algorithm for the Santa Claus problem, a 
-% % 	variant of the classic NP-complete jobs/machines scheduling problem
-% % 	\item Primarily using techniques from matroid optimization and graph theory
-% % \end{achievements}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% KEY COURSE PROJECTS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Key \newline Projects}{projects}
 
-% \employer{Planted Clique}{October 2015 - June 2016} {Lev Reyzin: UIC}
-% \smallskip
-% 	\begin{achievements}
-% 		\item Studied variants of the planted clique problem and other graph distinguishing
-% 		 problems using statistical algorithms
-% 	\end{achievements}
-% \bigskip
+\firstentry{\textbf{Comparing the efficacy of different data-preprocessing techniques in fair classification, University of Maryland}}
+ \hfill {Prof. Soheil Feizi} 
 
+{Compared the performance of recent data preprocessing techniques in fair classification (eg. Clustering) like data (reweighing techniques (RW), learning fairness representations (LFR), optimized pre-processing(OP) ) under the fairness metric "statistical parity" using open source toolkit AI Fairness 360 on standard data sets available. }
 
-% \employer{Knight's Tours on Aztec Diamonds }{February 2015 - May 2015} {Carl Yerger: CMU and Davidson College}
-% \smallskip
-% 	\begin{achievements}
-% 		\item Implemented algorithms that find knight's tours on small Aztec diamonds
-% 		\item Proved traditional inductive arguments for knight's tours fail for Aztec diamonds
-% 	\end{achievements}
+\entry{\textbf{Operating Systems, Stony Brook University}}
+ \hfill {Prof. Michael Ferdman} 
+{Built a  pre-emptive, multi-tasking {Operating System} from scratch. Implemented demand-paging, copy-on-fork and auto-growing stack functionalities. Created a compatible standard library and bash-like shell to interact with the OS.}
 
-% \clearpage
+\entry{\textbf{Computational Geometry, Stony Brook University}}
+\hfill{Prof. Joseph Mitchell}{}
 
-% \employer{Examining Euler Equations }{June 2014 - August 2014} {Johnny Guzman: Brown University}
-% \smallskip
+{ The alpha-fatness and chord-arc scores are different measures of the "niceness" of polygons. They may prove useful in developing quantitative measures by which electoral districts may be determined illegal. This project includes software for implementing these measures together with preliminary results on random polygons. }
 
-% 	\begin{achievements}
-% 	\item Research was performed under the Leadership Alliance Summer Research Program at Brown University, which aims to prepare underrepresented groups for graduate school
-% 	\item Numerically and analytically examined the behavior of solutions of the one dimensional generalized 
-% 	model vorticity equation 
-% 	%in search of determining whether solutions to the three dimension Euler Equations exist globally
-% 	\end{achievements}
-% \bigskip
 
-
-% 	\begin{achievements}
-% 	\item Research was performed during the 2013 Summer Undergraduate Applied Mathematics Institute at CMU
-% 	\item Discovered properties in binomial coefficients produced using the factorial defined by 
-% 	Manjul Bhargava over geometric progressions
-% 	%\item Studied signal processing and mathematical software with a group of 14 other 
-% 	%mathematics students		
-% 	\end{achievements}
-
-\bigskip
-
-\header{Awards and Fellowships}
-\bigskip
-
-\employer{CI Fellow}{2021-2021}{Northwestern University}
-\smallskip
-Awarded funding for a two-year postdoctoral fellowship\\
-
-\bigskip
-
-\employer{Tanzi-Egerton Fellow}{2020}{University of Washington}
-\smallskip
-Awarded to an outstanding female, senior graduate student in mathematics\\
-
-\bigskip
-
-\employer{Microsoft Research Dissertation Grant}{2020}{Microsoft Research}
-Awarded to 10 graduate students in computer science across the US to support them in finishing their Ph.D. work
-\bigskip
-
-\employer{McKibben and Merner Endowed Fellowship in Mathematics}{2017-2019}{University of Washington}
-\smallskip
-Awarded to two students who were exceptional in their preliminary exams 
-and first year courses\\
-\bigskip
-
-% \employer{Department of Mathematics, Statistics, and Computer Science Fellowship}{2015}{University of Illinois at Chicago}
-% \smallskip
-% Awarded to outstanding incoming first year students in the department of MSCS at UIC\\
-% \bigskip
-
-
-% \employer{Senior Leadership Recognition Award}{2015}{Carnegie Mellon University}
-
-% \smallskip
-
-% One of 40 students honored for making significant contributions to CMU's community 
-%  \bigskip
-
-
-
-% \bigskip
-
-%  \employer{Leadership Alliance Scholar}{2014}{~}
-% \smallskip
-% The Leadership Alliance selects talented undergraduates from underrepresented groups with the aim to
-% provide them mentorship and resources to becoming leaders in academia and industry. 
-%  \medskip
-
-\clearpage
-
-\header{Teaching}
-
-I taught the following courses:
-\begin{center}
-	\begin{tabular}{ l l l }
-	  \textbf{Math 107}& Math in Society & FEPPS Summer 2018 \\ 
-	  \textbf{CSE 311}&	 Foundations of Computing I & UW Spring 2020 	
-	\end{tabular}
-\end{center}
-
-I served as a teaching assistant for the following courses:
-\begin{center}
-	\begin{tabular}{ l l l }
-	  \textbf{Math 111}& Algebra with Applications & UW Fall 2017 \\ 
-	  \textbf{Math 124}&	 Calculus I & UW Winter  \& Spring 2017  \\  
-	 \textbf{Math 126} &    Multivariable Calculus   & UW Fall 2016    \\
-	\textbf{Math 121}	& Pre-Calculus	& UIC Fall 2015 \& Spring 2016\\	
-	\textbf{21-241}	&	Matrices and Linear Transformations & CMU Spring 2015 	
-	\end{tabular}
-\end{center}
-
-%\item{{\textbf {with high probability}}\\
-%Manage my math blog with high probability, https://samidavies.wordpress.com. Some posts are about topics in advanced mathematics, but most are aimed towards a general audience and motivated by real world examples! (My first year at UW really hindered my writing, but after September 13th 2017, 4pm EST, it should pick back up again.) }
-%\\
-% \smallskip
-% {\scriptsize * : Taught 2 active learning styled sections twice each week,
-%  held weekly office hours, graded exams and weekly quizzes. \\
-% ** : Taught 2 lecture styled sections twice each week, held weekly office hours, graded exams and weekly quizzes.} \\
-
-
-\bigskip
-
-%\header{Presentations}
-%\begin{achievements}
-%\item \textbf{Davies, S.}, Yalla, G. (2014) \textit{On Globally Defined Solutions of the Generalized CLM Equation} \\
-%2015 CMU Meeting of the Minds. Pittsburgh, PA\\
-%2015 Joint Mathematics Meeting. San Antonio, TX\\
-% 2014 Leadership Alliance National Symposium. Stamford, CT
-%\end{achievements}
-
-
-
-\header{Service and  outreach}
-
-\bigskip
-\employer{External Reviewer}{}{~}
-\vspace{-5mm}
-SODA 2020, ICALP 2020, \emph{IEEE Transactions on Information Theory}, MFCS 2020, ISAAC 2020, \emph{Operations Research}, 
-PODS 2021, WADS 2021, ICALP 2021, STOC 2022, ICALP 2022, ESA 2022, \emph{Discrete Mathematics}
-
-
-\bigskip
-\employer{Northwestern Junior Theorists Workshop}{December 2021}{~}
-\vspace{-5mm}
-Co-organized a workshop that highlighted rising theoretical computer scientists
-https://theory.cs.northwestern.edu/events/2021-junior-theorists-workshop/
-
-\bigskip
-\employer{Washington Directed Reading Program}{2018-2021}{~}
-\vspace{-5mm}
-Mentor for the WDRP, which pairs undergraduate students with graduate student mentors for independent reading project.
-Helped conceive and write grants for the WDRP in summer 2018
-
-\bigskip
-\employer{Mastery Learning Hour}{2021}{~}
-\vspace{-5mm}
-Math tutor for K-12 students. Provide support to students remotely during COVID-19 pandemic.
-
-\bigskip
-\employer{Freedom Education Project Puget Sound (FEPPS)}{2017-2019}{~}
-\vspace{-5mm}
-Tutor during fall and winter of 2017. Course instructor during the summer of 2018 at the Washington Corrections Center for Women.
-\bigskip
-
-\employer{Math Circle}{2018}{~}
-\vspace{-5mm}
-Instructor spring of 2018.
-
-
-\bigskip
-\employer{Assocation for Women in Math}{2016-2021}{~}
-\vspace{-5mm}
-Member since 2016. Secretary of the UW student chapter 2018-2019 academic year.
-
-
-
-
-
-
-%Assisted in the selection, hiring, and training of a staff of 11 Resident Assistants\\
-% Lead the house staff in the development of a shared house vision for 470 residents, 
-% while serving as an active point of interface between the house community and the greater CMU community
-
-% \bigskip
-%\item Resident Assistant for Morewood E-Tower, Donner House- \hspace{37mm} 08/2012-05/2013
-%\vspace{2mm}
-
-%Was responsible for providing educational programs and paraprofessional counseling for a residence wing of 35 women while resolving issues on diversity, alcohol/ drug abuse, academic performance and social acceptance for a building of 240 first year students. Conducted the live-out mentor program by organizing and fostering mentor-mentee relationships and coordinating various administrative tasks in support of mentor activities.
- %\textbf{Vice President for Kappa Kappa Gamma: Delta Xi Chapter}\\
- % January 2013 - December 2013
-%\bigskip
-
-
-% \header{Programming Languages}
-
-% \bigskip
-% Intermediate in in \LaTeX, Python, Julia\\
-% Novice in Matlab, Maple, Ruby, Java
-% \bigskip
-
-
-% \header{Selected Topics Coursework}
-
-% \bigskip
-% \textbf{Carnegie Mellon University}:\\
-% \smallskip
-
-% %Discrete Mathematics (2 semesters) $\qquad$ 
-% %Real Analysis (2 semesters) $\qquad$
-% \begin{center}
-% 	\begin{tabular}{ l l l }
-% 		 Operations Research & Linear Algebra (2 semesters) & Mathematical Finance (2 semesters)  \\ 
-% 		 Graph Theory &	Probability (2 semesters) & Adv. Macroeconomic Theory    \\
-% 		 Market Design & Numerical Methods & Adv. Microeconmic Theory
-% 	\end{tabular}
-% \end{center}
-
-
-% \bigskip
-
-% \textbf{University of Illinois at Chicago}:\\
-% \smallskip
-% \begin{center}
-% 	\begin{tabular}{ l l l }
-% 		Probabilistic Method &  Foundations in Data Science & Adv. Computer Algorithms   \\ 
-% 		Discrete Geometry &	 Measure Theory  &     \\
-% 	\end{tabular}
-% \end{center}
-% \bigskip
+\entry{}{\textbf{Energy Consumption Prediction, Stony Brook University}}
+ \hfill {Prof. Zhenhua Liu} 
  
-%  \textbf{University of Washington}:\\
-%  \smallskip
-%  \begin{center}
-% 	 \begin{tabular}{ l l l }
-% 		Counting \& Sampling &  Adv. Linear Algebra (2 quarters)   & Optimization  
-% 	 \end{tabular}
-%  \end{center}\\
-%  \smallskip
-%  \scriptsize{Preliminary exams passed at UW in Complex Analysis and Algebra in September 2017}
+{Predicting an year's electricity consumption using the electricity consumption of previous year, time series data at 15min interval for 365 days. Implemented SARIMA, SVM and LSTM models using PyTorch and compared the results for 10 homes. Also enhanced the predictions using smart meter data for various appliances of the same homes.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TECHNICAL SKILLS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills}{pls}
+\firstentry{  
+\textbf{Programming Languages:} C, C++, Java, Python, SQL, PL-SQL, MATLAB, Prolog, Qiskit 
+}\\[-24pt]
+
+\entry{ 
+\textbf{Platforms/Tools:} Linux, Windows, GDB, Eclipse, QEMU, Processing 
+} 
+\entry{   
+\textbf{Libraries for Machine Learning:} PyTorch, Numpy, Keras, TensorFlow, Jupyter Notebook
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACADEMIC HONORS & AWARDS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Awards}{aws}
+\firstentry{
+Chair's Fellowship, University of Maryland, College Park}\\[-24pt]
+\entry{
+TCS (Theoretical Computer Science) Women Scholarship STOC-2018  }
+\entry{
+ACM Travel Scholarship SPAA-2019 }
+\entry{
+TCS (Theoretical Computer Science) Women Scholarship STOC-2019 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% REFERENCES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-%\employer{Carnegie Mellon University- Department of Student Life}{2012-present}{Resident Assistant}
-%	\begin{achievements}
-%	\item Was responsible for providing educational programs and paraprofessional counseling for a residence wing of 35 women while resolving issues on diversity, alcohol/ drug abuse, academic performance and social acceptance for a building of 240 first year students.
-%	\item Conducted the live-out mentor program by organizing and fostering mentor-mentee relationships and coordinating various administrative tasks in support of mentor activities.
-
-%	\end{achievements}
-
-%\employer{Carnegie Mellon University- Department of Student Life}{2014-present}{Community Advisor}
-%	\begin{achievements}
-%	\item Assisted in the selection, hiring and training of a staff of 11 Resident Assistants.
-%	\item Will lead the house staff in the development of a shared house vision for 470 residents, while serving as an active point of interface between the house community and the greater CMU community.
-%	\end{achievements}
-
-
+\section{References}{ref}
+\firstentry{
+Prof. Aravind Srinivasan, University of Maryland, College Park \hfill email: \href{mailto: srin@cs.umd.edu}{\textit{srin@cs.umd.edu}}
+}
+\entry{
+Prof. John Dickerson, University of Maryland, College Park \hfill email: \href{mailto:johnd@umd.edu}{\textit{johnd@umd.edu}}
+}
+\entry{
+Prof. Rezaul Chowdhury, Stony Brook University \hfill email: \href{mailto:rezaul@cs.stonybrook.edu}{\textit{rezaul@cs.stonybrook.edu}}
+}
+\end{myresume}
 \end{document}
