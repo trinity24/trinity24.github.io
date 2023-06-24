@@ -38,14 +38,6 @@ layout: default
 <h3 style="color:Indigo;">News</h3>
 
 
-<section id="news">
-    {% for post in site.posts %} {% if post.news == true %}
-    <div class="news-item">
-        <div class="date"> {{ post.date | date: "%b&nbsp;%-d" }} </div>
-        <div class="content"> {{ post.content }} </div>
-    </div>
-    {% endif %} {% endfor %}
-</section>
 
 <!-- <h3 style="color:Indigo;">Current Research</h3>
 <section id="research">
