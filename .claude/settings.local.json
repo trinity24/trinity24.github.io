@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/rpujari/Academics/trinity24.github.io/css /Users/rpujari/Academics/trinity24.github.io/js /Users/rpujari/Academics/trinity24.github.io/thoughts)",
+      "Bash(cp /Users/rpujari/Academics/pujari-rajkumar.github.io/images/favicon.ico /Users/rpujari/Academics/trinity24.github.io/assets/favicon.ico)",
+      "Bash(cp /Users/rpujari/Academics/pujari-rajkumar.github.io/js/theme.js /Users/rpujari/Academics/trinity24.github.io/js/theme.js)",
+      "Bash(git mv *)",
+      "Bash(git rm *)",
+      "Read(//tmp/**)",
+      "Bash(git add *)",
+      "Bash(curl -sL \"https://umd.edu/\" -A \"Mozilla/5.0\")",
+      "Bash(curl -sL \"https://umd.edu/default/static/favicon.ico\" -A \"Mozilla/5.0\" -o assets/favicon.ico)",
+      "WebFetch(domain:www.dagstuhl.de)",
+      "WebFetch(domain:scholar.google.com)",
+      "Bash(curl -s \"http://export.arxiv.org/api/query?search_query=ti:%22ProcVQA%22&max_results=5\")",
+      "Bash(curl -sv \"http://export.arxiv.org/api/query?search_query=ti:ProcVQA&max_results=3\")",
+      "WebSearch",
+      "WebFetch(domain:aclanthology.org)",
+      "Bash(python3 -c \"print\\(19-9\\)\")",
+      "Bash(awk '/<ul class=\"news-list\" id=\"news-items\">/,/<\\\\/ul>/' index.html)"
+    ]
+  }
+}
