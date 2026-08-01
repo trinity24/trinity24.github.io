@@ -377,20 +377,6 @@ html[data-theme="light"] .icon-moon {
 	display: block;
 }
 
-.news-thumb {
-	flex: 0 0 100px;
-}
-
-.news-thumb img {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	border-radius: 8px;
-	border: 1px solid var(--border);
-	background: var(--bg-alt);
-	display: block;
-}
-
 .pub-body {
 	flex: 1;
 	min-width: 0;
